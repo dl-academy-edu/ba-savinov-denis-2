@@ -1,0 +1,51 @@
+/* articles-control */
+
+.articles-control {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 47px;
+}
+
+.articles-control button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.page-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 65px;
+}
+
+.page-list li {
+    margin-right: 66px;
+}
+
+.page-item {
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.page-item:hover:not(.page-item-active) {
+    opacity: 0.5;
+}
+
+.page-item-active {
+    color: #C29974;
+}
+
+.prev-page:hover svg path,
+.next-page:hover svg path {
+    stroke: #C29974;
+    stroke-opacity: 1;
+}
+
+.prev-page:active svg path,
+.next-page:active svg path {
+    stroke-opacity: 0.5;
+}
