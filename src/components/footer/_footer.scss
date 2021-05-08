@@ -46,10 +46,6 @@ $primary-text-color: #fff;
     }
 }
 
-.rating-item {
-    color: $primary-text-color;
-}
-
 .subscribe-form {
     display: flex;
     padding-top: 26px;
@@ -142,6 +138,7 @@ $primary-text-color: #fff;
         color: #C29974;
     }
     &__label {
+        color: $primary-text-color;
         padding-left: 5px;
         font-size: 13px;
         cursor: pointer;
