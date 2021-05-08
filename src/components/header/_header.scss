@@ -2,46 +2,39 @@
     padding: 48px 0 60px;
     display: flex;
     align-items: center;
+    a {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 19px;
+        white-space: nowrap;
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 0.2;
+        }
+    }
+    &__nav {
+        margin: 0 auto 0 20px;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: 21px;
+    }
+    &__contact-link {
+        font-weight: 700;
+        letter-spacing: 0.50px;
+        margin-left: 9px;
+    }
 }
 
-.header a {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 19px;
-    white-space: nowrap;
-}
-
-.header a:hover {
-    opacity: 0.5;
-}
-
-.header a:active {
-    opacity: 0.2;
-}
-
-.header-logo {
+.logo {
     display: block;
-}
-
-.main-menu {
-    margin: 0 auto 0 20px;
-}
-
-.header-list {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    flex-wrap: wrap;
-}
-
-.header-item {
-    margin-right: 21px;
-}
-
-.contact-link {
-    font-weight: 700;
-    letter-spacing: 0.50px;
-    margin-left: 9px;
 }
 
 
@@ -51,41 +44,36 @@
     position: relative;
     width: 300px;
     height: 24px;
-}
-
-.search-text {
-    height: 24px;
-    width: 0;
-    padding: 0 15px 0;
-    border: none;
-    border-bottom: 2px solid transparent;
-    outline: none;
-    background: transparent;
-    transition: .4s cubic-bezier(0, 0.8, 0, 1);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-}
-
-.search-text:focus {
-    width: 200px;
-    z-index: 1;
-    border-bottom: 2px solid #000000;
-}
-
-.search-img {
-    display: block;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 9px;
-}
-
-.search-form:hover {
-    opacity: 0.5;
-}
-
-.search-form:active {
-    opacity: 0.2;
+    &:hover {
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 0.2;
+    }
+    &__text {
+        height: 24px;
+        width: 0;
+        padding: 0 15px 0;
+        border: none;
+        border-bottom: 2px solid transparent;
+        outline: none;
+        background: transparent;
+        transition: .4s cubic-bezier(0, 0.8, 0, 1);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        &:focus {
+            width: 200px;
+            z-index: 1;
+            border-bottom: 2px solid #000000;
+        }
+    }
+    &__img {
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 9px;
+    }
 }
