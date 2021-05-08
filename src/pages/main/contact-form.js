@@ -1,5 +1,5 @@
 let checkboxAgrement = document.querySelector("#agreement"),
-    modalSubmitBtn = document.querySelector(".modal-window-btn");
+    modalSubmitBtn = document.querySelector(".contact-form__btn");
 
 
 // Window unlock submit button

@@ -53,11 +53,10 @@ h2 {
     font-size: 16px;
     line-height: 22px;
     cursor: pointer;
-}
-
-button:disabled {
-    background: #C1C1C1;
-    color: #E1E1E1;
+    &:disabled {
+        background: #C1C1C1;
+        color: #E1E1E1;
+    }
 }
 
 .page-title {
@@ -76,33 +75,29 @@ button:disabled {
     font-size: 20px;
     line-height: 25px;
     padding: 16px 0 50px;
-}
-
-.breadcrumbs-list {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.breadcrumbs-list li {
-    margin-right: 20px;
-}
-
-.breadcrumbs-link::after {
-    content: '';
-    display: inline-block;
-    background-image: url('../static/images/next-arrow.svg');
-    background-size: 9px 12px;
-    background-repeat: no-repeat;
-    margin-left: 20px;
-    height: 12px;
-    width: 9px;
-}
-
-.breadcrumbs-item-active {
-    text-transform: capitalize;
-    opacity: 0.5;
+    &-list {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-right: 20px;
+        }
+    }
+    &-link::after {
+        content: '';
+        display: inline-block;
+        background-image: url('../static/images/next-arrow.svg');
+        background-size: 9px 12px;
+        background-repeat: no-repeat;
+        margin-left: 20px;
+        height: 12px;
+        width: 9px;
+    }
+    &-item-active {
+        text-transform: capitalize;
+        opacity: 0.5;
+    }
 }
 
 // Подключение компонентов

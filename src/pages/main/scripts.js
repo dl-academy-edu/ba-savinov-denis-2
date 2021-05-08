@@ -1,25 +1,24 @@
-let modalOpenBtn = document.querySelector(".about-us__btn"),
-    popupOverlay = document.querySelector(".modal-overlay"),
-    modalWindow = document.querySelector(".modal-window"),
-    modalCloseBtn = document.querySelector(".popup-close"),
-    modalInput = modalWindow.querySelector("#contact-name"),
+let modalCloseBtn = document.querySelector(".modal-window__btn_cross"),
+    modalOpenBtn = document.querySelector(".about-us__btn"),
     sliderToggleBtn = document.querySelectorAll(".slider__toggle-btn"),
-    sliderCounter = document.querySelector(".slider__counter");
-
+    sliderCounter = document.querySelector(".slider__counter"),
+    modalWindow = document.querySelector(".modal-window"),
+    modalInput = modalWindow.querySelector("#contact-name"),
+    overlay = document.querySelector(".modal-overlay");
 
 
 // Modal window open
 
 modalOpenBtn.addEventListener('click', () => {
-    popupOverlay.classList.add('popup-visible');
+    overlay.classList.add('popup-visible');
     modalWindow.classList.add('popup-visible');
     modalInput.focus();
 })
 
-// Modal window close
+// // // Modal window close
 
 modalCloseBtn.addEventListener('click', () => {
-    popupOverlay.classList.remove('popup-visible');
+    overlay.classList.remove('popup-visible');
     modalWindow.classList.remove('popup-visible');
 })
 
@@ -27,13 +26,13 @@ window.addEventListener('keydown', (event) => {
 
 
     if (event.key === 'Escape') {
-        popupOverlay.classList.remove('popup-visible');
+        overlay.classList.remove('popup-visible');
         modalWindow.classList.remove('popup-visible');
     }
 
 })
 
-// slider control
+// // slider control
 
 sliderToggleBtn.forEach((itemBtn) => itemBtn.addEventListener(`click`, (event) => {
     sliderCounter.textContent = event.target.dataset.slidenumber;
