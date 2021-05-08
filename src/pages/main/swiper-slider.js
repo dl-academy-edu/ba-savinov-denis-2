@@ -4,8 +4,8 @@ const swiper = new Swiper('.swiper-container', {
     loop: true,
 
     navigation: {
-        nextEl: '.next-category',
-        prevEl: '.prev-category',
+        nextEl: '.control__btn_next',
+        prevEl: '.control__btn_prev',
     }
 
 });

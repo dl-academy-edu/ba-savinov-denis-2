@@ -1,10 +1,10 @@
-let modalOpenBtn = document.querySelector(".dlk-info-btn"),
+let modalOpenBtn = document.querySelector(".about-us__btn"),
     popupOverlay = document.querySelector(".modal-overlay"),
     modalWindow = document.querySelector(".modal-window"),
     modalCloseBtn = document.querySelector(".popup-close"),
     modalInput = modalWindow.querySelector("#contact-name"),
-    sliderToggleBtn = document.querySelectorAll(".slider-toggle-btn"),
-    sliderCounter = document.querySelector(".slider-counter");
+    sliderToggleBtn = document.querySelectorAll(".slider__toggle-btn"),
+    sliderCounter = document.querySelector(".slider__counter");
 
 
 
@@ -38,11 +38,11 @@ window.addEventListener('keydown', (event) => {
 sliderToggleBtn.forEach((itemBtn) => itemBtn.addEventListener(`click`, (event) => {
     sliderCounter.textContent = event.target.dataset.slidenumber;
     removeClassActiveBtn(sliderToggleBtn);
-    event.target.classList.add('slider-toggle-active');
+    event.target.classList.add('slider__toggle-btn_active');
 }));
 
 function removeClassActiveBtn(arr) {
     arr.forEach((item) => {
-        item.classList.remove('slider-toggle-active');
+        item.classList.remove('slider__toggle-btn_active');
     })
 }

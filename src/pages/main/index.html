@@ -18,113 +18,113 @@
 <body>
     @@include('header/index.html')
     <main class="container">
-        <section class="slider">
-            <div class="slider-body">
-                <div class="slider-control">
-                    <div class="slider-counter">01</div>
-                    <div class="slider-toggle">
+        <section class="slider slider-container">
+            <div class="slider__body">
+                <div class="slider__control">
+                    <div class="slider__counter">01</div>
+                    <div class="slider__toggle">
                         <ul>
-                            <li class="slider-toggle-item">
-                                <button class="slider-toggle-btn slider-toggle-active" aria-label="button slide one" type="button" data-slidenumber="01"></button>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn slider__toggle-btn_active" aria-label="button slide one" type="button" data-slidenumber="01"></button>
                             </li>
-                            <li class="slider-toggle-item">
-                                <button class="slider-toggle-btn" aria-label="button slide two" type="button" data-slidenumber="02"></button>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide two" type="button" data-slidenumber="02"></button>
                             </li>
-                            <li class="slider-toggle-item">
-                                <button class="slider-toggle-btn" aria-label="button slide there" type="button" data-slidenumber="03"></button>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide three" type="button" data-slidenumber="03"></button>
                             </li>
-                            <li class="slider-toggle-item">
-                                <button class="slider-toggle-btn" aria-label="button slide four" type="button" data-slidenumber="04"></button>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide four" type="button" data-slidenumber="04"></button>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="slider-text">
-                    <h1 class="slider-title slider-text-item">THE OOH NOO COLLECTION</h1>
-                    <p class="slider-text-item">Designed in Slovenia</p>
-                    <button class="slider-text-btn button" type="button">EXPLORE NOW</button>
+                <div class="slider__text">
+                    <h1 class="slider__title slider__text-item">THE OOH NOO COLLECTION</h1>
+                    <p class="slider__text-item">Designed in Slovenia</p>
+                    <button class="slider__text-btn button" type="button">EXPLORE NOW</button>
                 </div>
-                <img class="slider-img" src="/static/images/monster.png" alt="" width="636" height="489">
+                <img class="slider__img" src="/static/images/monster.png" alt="" width="636" height="489">
             </div>
-            <div class="slider-footer">
+            <div class="slider__footer">
                 <p>Free (continental) USA shipping on all orders of $100 USD or more!</p>
             </div>
         </section>
         <section class="category swiper-container">
-            <h2 class="category-title">Category Products</h2>
-            <div class="category-wrapper swiper-wrapper">
-                <a class="category-item category-one swiper-slide" href="#">
+            <h2 class="category__title">Category Products</h2>
+            <div class="category__wrapper swiper-wrapper">
+                <a class="category__item category__item_one swiper-slide" href="#">
                     <h3>APPAREL KIDS</h3>
                 </a>
-                <a class="category-item category-two swiper-slide" href="#">
+                <a class="category__item category__item_two swiper-slide" href="#">
                     <h3>HOLIDAY SHOP</h3>
                 </a>
-                <a class="category-item category-three swiper-slide" href="pages/toys/">
+                <a class="category__item category__item_three swiper-slide" href="pages/toys/">
                     <h3>TOYS</h3>
                 </a>
-                <a class="category-item category-four swiper-slide" href="#">
+                <a class="category__item category__item_four swiper-slide" href="#">
                     <h3>ACCESSORIES</h3>
                 </a>
-                <a class="category-item category-five swiper-slide" href="#">
+                <a class="category__item category__item_five swiper-slide" href="#">
                     <h3>SALE</h3>
                 </a>
-                <a class="category-item category-six swiper-slide" href="#">
+                <a class="category__item category__item_six swiper-slide" href="#">
                     <h3>APPAREL ADULTS</h3>
                 </a>
             </div>
-            <div class="category-control">
-                <button class="prev-category" aria-label="button previous category" type="button"></button>
-                <button class="next-category" aria-label="button next category" type="button"></button>
-                <p class="category-description">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+            <div class="control">
+                <button class="control__btn_prev" aria-label="button previous category" type="button"></button>
+                <button class="control__btn_next" aria-label="button next category" type="button"></button>
+                <p class="control__description">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
             </div>
         </section>
         <section class="delivery">
-            <div class="delivery-crop-img">
+            <div class="delivery__crop-img">
                 <img src="/static/images/woman.jpg" alt="delivery-img" width="514" height="642">
             </div>
-            <div class="delivery-content">
-                <h2 class="delivery-title">Delivery</h2>
-                <ul class="delivery-menu">
-                    <li class="delivery-menu-item delivery-menu-active">
+            <div class="delivery__content">
+                <h2 class="delivery__title">Delivery</h2>
+                <ul class="delivery__menu">
+                    <li class="delivery__menu-item delivery__menu-item_active">
                         <a href="#">Delivery</a>
                     </li>
-                    <li class="delivery-menu-item">
+                    <li class="delivery__menu-item">
                         <a href="#">Guarantee</a>
                     </li>
-                    <li class="delivery-menu-item">
+                    <li class="delivery__menu-item">
                         <a href="#">Credit</a>
                     </li>
                 </ul>
                 <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
                 <p>What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
-                <a href="#" class="delivery-learn-btn button">LEARN MORE</a>
+                <a href="#" class="delivery__learn-btn button">LEARN MORE</a>
             </div>
         </section>
         <section class="company">
             <h2 class="visually-hidden">Company</h2>
-            <ul class="company-list">
-                <li class="company-one"><img src="/static/images/company/mail-group.png" alt="" width="193" height="60"></li>
-                <li class="company-two"><img src="/static/images/company/apple.png" alt="" width="179" height="61"></li>
-                <li class="company-three"><img src="/static/images/company/eltex.png" alt="" width="216" height="46"></li>
-                <li class="company-four"><img src="/static/images/company/owox.png" alt="" width="211" height="40"></li>
+            <ul class="company__list">
+                <li><img src="/static/images/company/mail-group.png" alt="" width="193" height="60"></li>
+                <li><img src="/static/images/company/apple.png" alt="" width="179" height="61"></li>
+                <li><img src="/static/images/company/eltex.png" alt="" width="216" height="46"></li>
+                <li><img src="/static/images/company/owox.png" alt="" width="211" height="40"></li>
             </ul>
         </section>
         <section class="dlk-info">
             <h2 class="visually-hidden">DLK info</h2>
-            <article class="dlk-about">
-                <h2 class="dlk-info-titles">Design Life Kids</h2>
-                <div class="dlk-info-wrapper">
+            <article class="about-us dlk-info__item">
+                <h2 class="about-us__titles">Design Life Kids</h2>
+                <div class="about-us__wrapper">
                     <h3>About Us</h3>
                     <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-                    <button class="dlk-info-btn button">buy now</button>
+                    <button class="about-us__btn button">buy now</button>
                 </div>
             </article>
-            <article class="dlk-contacts">
-                <h2 class="dlk-info-titles">Contacts</h2>
-                <div class="dlk-info-wrapper">
+            <article class="contacts">
+                <h2 class="contacts__titles">Contacts</h2>
+                <div class="contacts__wrapper">
                     <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
                 </div>
-                <iframe title="Map of where we are" class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2651.820908703631!2d-122.420958355798!3d37.77681338703293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809969fa0579%3A0xa828d2bfd4ce59fb!2s240%20Van%20Ness%20Ave%2C%20San%20Francisco%2C%20CA%2094102%2C%20USA!5e0!3m2!1sen!2sru!4v1617131216820!5m2!1sen!2sru"
+                <iframe title="Map of where we are" class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2651.820908703631!2d-122.420958355798!3d37.77681338703293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809969fa0579%3A0xa828d2bfd4ce59fb!2s240%20Van%20Ness%20Ave%2C%20San%20Francisco%2C%20CA%2094102%2C%20USA!5e0!3m2!1sen!2sru!4v1617131216820!5m2!1sen!2sru"
                     allowfullscreen="" loading="lazy"></iframe>
             </article>
         </section>

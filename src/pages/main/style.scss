@@ -1,5 +1,5 @@
 @import "../../../node_modules/swiper/swiper-bundle.css";
-%navigate-categoty {
+@mixin navigate-categoty {
     border: none;
     width: 37px;
     height: 37px;
@@ -7,36 +7,44 @@
     cursor: pointer;
 }
 
-%dlk-about-property {
+@mixin dlk-about-property {
     max-width: 543px;
     width: 100%;
+}
+
+@mixin dlk-info-block {
+    &__wrapper {
+        padding: 23px 30px 35px;
+        background-color: #E1F0F7;
+    }
+    &__titles {
+        margin: 0 0 -22px 30px;
+    }
+    &__btn {
+        margin-top: 20px;
+        max-width: 123px;
+    }
 }
 
 
 /* SLIDER */
 
 .slider {
-    margin-top: 69px;
-    &-body {
+    &-container {
+        margin-top: 69px;
+    }
+    &__body {
         display: flex;
         justify-content: space-between;
         padding-right: 100px;
         background-color: #EEE4DB;
     }
-    &-control {
+    &__control {
         margin-top: 18px;
         margin-left: 28px;
         width: 15%;
     }
-    &-toggle {
-        ul {
-            list-style-type: none;
-            margin: 10px 0 50px 3px;
-            padding: 0;
-            line-height: 0;
-        }
-    }
-    &-counter {
+    &__counter {
         font: {
             family: var(--font-montserrat);
             style: normal;
@@ -46,10 +54,18 @@
         line-height: 73px;
         color: rgba(30, 6, 6, 0.05);
     }
-    &-toggle-item {
+    &__toggle {
+        ul {
+            list-style-type: none;
+            margin: 10px 0 50px 3px;
+            padding: 0;
+            line-height: 0;
+        }
+    }
+    &__toggle-item {
         margin-bottom: 11px;
     }
-    &-toggle-btn {
+    &__toggle-btn {
         width: 31px;
         height: 3px;
         vertical-align: middle;
@@ -60,11 +76,11 @@
         &:hover {
             background: rgba(30, 6, 6, 0.6);
         }
+        &_active {
+            background: rgba(30, 6, 6, 0.6);
+        }
     }
-    &-toggle-active {
-        background: rgba(30, 6, 6, 0.6);
-    }
-    &-text {
+    &__text {
         width: auto;
         padding: 90px 0 0 19px;
         p {
@@ -77,31 +93,31 @@
             line-height: 25px;
             color: #1E0606;
         }
-        &-btn {
-            max-width: 161px;
-            width: 100%;
-            margin-bottom: 50px;
-            white-space: nowrap;
-            border: none;
-            &:hover {
-                background: #C29974;
-            }
-            &:active {
-                background: #CFAF91;
-            }
+    }
+    &__text-btn {
+        max-width: 161px;
+        width: 100%;
+        margin-bottom: 50px;
+        white-space: nowrap;
+        border: none;
+        &:hover {
+            background: #C29974;
+        }
+        &:active {
+            background: #CFAF91;
         }
     }
-    &-title {
+    &__title {
         font-size: 40px;
     }
-    &-text-item {
+    &__text-item {
         margin: 0 0 18px 0;
     }
-    &-img {
+    &__img {
         display: block;
         margin-top: -89px;
     }
-    &-footer {
+    &__footer {
         padding: 11px 0;
         background-color: #C29974;
         position: relative;
@@ -123,7 +139,7 @@
 
 .category {
     padding-top: 31px;
-    &-title {
+    &__title {
         font-family: var(--font-montserrat);
         font-style: normal;
         font-weight: bold;
@@ -132,12 +148,12 @@
         text-transform: uppercase;
         color: #1E0606;
     }
-    &-wrapper {
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         min-width: 0;
     }
-    &-item {
+    &__item {
         display: flex;
         width: 280px;
         height: 270px;
@@ -161,72 +177,71 @@
             }
         }
     }
-    &-one {
+    &__item_one {
         background: url(/static/images/category-kids.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #DBE4DB;
     }
-    &-two {
+    &__item_two {
         background: url(/static/images/category-holiday.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #EADDD3;
     }
-    &-three {
+    &__item_three {
         background: url(/static/images/category-toys.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #F8F2DA;
     }
-    &-four {
+    &__item_four {
         background: url(/static/images/category-accessories.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #D5D4E1;
     }
-    &-five {
+    &__item_five {
         background: url(/static/images/category-sale.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #F3D0DB;
     }
-    &-six {
+    &__item_six {
         background: url(/static/images/category-adults.png) no-repeat center;
         background-blend-mode: multiply;
         background-color: #E5EAF8;
     }
-    &-control {
-        display: flex;
-        align-items: center;
-        padding-top: 14px;
-    }
-    &-description {
+    &__description {
         max-width: 50%;
         color: #1E0606;
     }
 }
 
-.next-category {
-    @extend %navigate-categoty;
-    margin-right: 20px;
-    &::after {
-        content: ' ';
-        display: block;
-        background-image: url('/static/images/next-arrow.svg');
-        background-size: 24px 29px;
-        background-repeat: no-repeat;
-        height: 32px;
-        width: 28px;
+.control {
+    display: flex;
+    align-items: center;
+    padding-top: 14px;
+    &__btn_prev {
+        @include navigate-categoty;
+        margin-right: 6px;
+        &::after {
+            content: ' ';
+            display: block;
+            background-image: url('/static/images/prev-arrow.svg');
+            background-size: 24px 29px;
+            background-repeat: no-repeat;
+            height: 32px;
+            width: 28px;
+        }
     }
-}
-
-.prev-category {
-    @extend %navigate-categoty;
-    margin-right: 6px;
-    &::after {
-        content: ' ';
-        display: block;
-        background-image: url('/static/images/prev-arrow.svg');
-        background-size: 24px 29px;
-        background-repeat: no-repeat;
-        height: 32px;
-        width: 28px;
+    &__btn_next {
+        @include navigate-categoty;
+        margin-right: 20px;
+        &::after {
+            content: ' ';
+            display: block;
+            background-image: url('/static/images/next-arrow.svg');
+            background-size: 24px 29px;
+            background-repeat: no-repeat;
+            height: 32px;
+            width: 28px;
+        }
     }
 }
 
@@ -236,7 +251,7 @@
 .delivery {
     padding-top: 74px;
     display: flex;
-    &-crop-img {
+    &__crop-img {
         max-width: 480px;
         width: 100%;
         height: 559px;
@@ -245,7 +260,7 @@
             margin: -1px 0 0px -17px;
         }
     }
-    &-content {
+    &__content {
         padding-left: 121px;
         width: 100%;
         p {
@@ -253,10 +268,10 @@
             max-width: 470px;
         }
     }
-    &-title {
+    &__title {
         margin: 30px 0 6px;
     }
-    &-menu {
+    &__menu {
         margin: 0 0 29px 0;
         padding: 0;
         list-style-type: none;
@@ -265,26 +280,26 @@
         font-weight: normal;
         font-size: 26px;
         line-height: 34px;
-        &-item {
-            margin: 20px 0;
-        }
-        &-active {
-            font-weight: bold;
-            position: relative;
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                top: -15px;
-                right: 315px;
-                width: 326px;
-                height: 55px;
-                z-index: -1;
-                background: rgba(112, 187, 220, 0.2);
-            }
+    }
+    &__menu-item {
+        margin: 20px 0;
+    }
+    &__menu-item_active {
+        font-weight: bold;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -15px;
+            right: 315px;
+            width: 326px;
+            height: 55px;
+            z-index: -1;
+            background: rgba(112, 187, 220, 0.2);
         }
     }
-    &-learn-btn {
+    &__learn-btn {
         max-width: 149px;
         width: 100%;
         margin-top: 26px;
@@ -296,7 +311,7 @@
 
 .company {
     padding: 90px 0 86px 0;
-    &-list {
+    &__list {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -309,63 +324,54 @@
 
 /* DLK info */
 
-.dlk {
-    &-info {
-        display: flex;
-        padding-bottom: 60px;
-        &-wrapper {
-            padding: 23px 30px 35px;
-            background-color: #E1F0F7;
-        }
-        &-titles {
-            margin: 0 0 -22px 30px;
-        }
-        &-btn {
-            margin-top: 20px;
-            max-width: 123px;
-        }
-    }
-    &-about {
-        @extend %dlk-about-property;
+.dlk-info {
+    display: flex;
+    padding-bottom: 60px;
+    &__item {
         margin-right: 57px;
-        position: relative;
-        h3 {
-            margin: 11px 0 0 0;
-            font-family: var(--font-crimsontext);
-            font-style: italic;
-            font-weight: normal;
-            font-size: 26px;
-            line-height: 32px;
-        }
-        p {
-            margin: 10px 0 0 0;
-        }
-    }
-    &-contacts {
-        @extend %dlk-about-property;
-        position: relative;
-        p {
-            margin: 19px 0 0 0;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: 23px;
-            left: 0px;
-            max-width: 543px;
-            width: 100%;
-            max-height: 209px;
-            height: 100%;
-            background-color: #E1F0F7;
-            z-index: -1;
-        }
     }
 }
 
-.map {
-    display: block;
-    margin: -15px auto 0;
-    width: 483px;
-    height: 196px;
-    border: 0;
+.about-us {
+    @include dlk-about-property;
+    h3 {
+        margin: 11px 0 0 0;
+        font-family: var(--font-crimsontext);
+        font-style: italic;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    p {
+        margin: 10px 0 0 0;
+    }
+    @include dlk-info-block;
+}
+
+.contacts {
+    @include dlk-about-property;
+    position: relative;
+    p {
+        margin: 19px 0 0 0;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 23px;
+        left: 0px;
+        max-width: 543px;
+        width: 100%;
+        max-height: 209px;
+        height: 100%;
+        background-color: #E1F0F7;
+        z-index: -1;
+    }
+    @include dlk-info-block;
+    &__map {
+        display: block;
+        margin: -15px auto 0;
+        width: 483px;
+        height: 196px;
+        border: 0;
+    }
 }
