@@ -1,72 +1,64 @@
 /* footer */
 
-footer {
+.footer {
     background: #434343;
     padding: 100px 0;
+    &-top-content {
+        padding-bottom: 14px;
+    }
+    &-titles {
+        font-weight: normal;
+        color: #aaa;
+        border-bottom: #666666 solid 1px;
+        padding-bottom: 22px;
+        margin: 0;
+    }
+    &-lists {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-customer-info,
+    .navigation-list,
+    .connect {
+        max-width: 380px;
+        width: 100%;
+    }
+    &-navigation-menu,
+    &-customer-menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 28px;
+    }
+    &-menu-item a,
+    .rating-label,
+    .rating-item {
+        color: #fff;
+    }
+    &-menu-item {
+        padding-bottom: 15px;
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 0.2;
+        }
+    }
+    &-bottom-content {
+        border-top: #666666 solid 1px;
+        padding: 23px 0 0;
+    }
 }
 
-.footer-top-content {
-    padding-bottom: 14px;
-}
-
-.footer-titles {
-    font-weight: normal;
-    color: #aaa;
-    border-bottom: #666666 solid 1px;
-    padding-bottom: 22px;
-    margin: 0;
-}
-
-.footer-lists {
-    display: flex;
-    justify-content: space-between;
-}
-
-.navigation-list,
-.footer-customer-info,
-.connect {
-    max-width: 380px;
-    width: 100%;
-}
-
-.footer-navigation-menu,
-.footer-customer-menu,
-.socials-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-navigation-menu,
-.footer-customer-menu {
-    padding-top: 28px;
-}
-
-.footer-menu-item a,
-.socials-link,
-.copyright,
-.rating-label,
-.rating-item {
-    color: #fff;
-}
-
-.footer-menu-item {
-    padding-bottom: 15px;
-}
-
-.socials-link:hover,
-.footer-menu-item:hover {
-    opacity: 0.5;
-}
-
-.socials-link:active,
-.footer-menu-item:active {
-    opacity: 0.2;
-}
-
-.subscribe-form {
-    display: flex;
-    padding-top: 26px;
+.subscribe {
+    &-form {
+        display: flex;
+        padding-top: 26px;
+    }
+    &-btn {
+        max-width: 81px;
+        width: 100%;
+    }
 }
 
 .input-email {
@@ -76,65 +68,62 @@ footer {
     background-color: #666;
     border: 1px solid transparent;
     border-right: 0;
-}
-
-.input-email::placeholder {
-    color: #EBEBEB;
-}
-
-.input-email:hover,
-.input-email:active {
-    border: 1px solid #FFFDFD;
-    border-right: 0;
-}
-
-.subscribe-btn {
-    max-width: 81px;
-    width: 100%;
+    &::placeholder {
+        color: #EBEBEB;
+    }
+    &:hover,
+    &:active {
+        border: 1px solid #FFFDFD;
+        border-right: 0;
+    }
 }
 
 .socials {
     padding-top: 29px;
+    &-list {
+        display: flex;
+        font-size: 14px;
+        list-style-type: none;
+        padding-left: 11px;
+        margin: 0;
+        li:not(:first-child) {
+            padding-left: 28px;
+        }
+    }
+    &-link {
+        position: relative;
+        z-index: 0;
+        color: #fff;
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 0.2;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #666666;
+            z-index: -1;
+        }
+    }
 }
 
-.socials-list {
-    display: flex;
-    font-size: 14px;
-    padding-left: 11px;
-}
-
-.socials-list li:not(:first-child) {
-    padding-left: 28px;
-}
-
-.socials-link {
-    position: relative;
-    z-index: 0;
-}
-
-.socials-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #666666;
-    z-index: -1;
-}
-
-.rating-list,
-.copyright,
-.designer-link {
+.copyright {
     max-width: 380px;
     width: 100%;
+    color: #fff;
 }
 
-.footer-bottom-content {
-    border-top: #666666 solid 1px;
-    padding: 23px 0 0;
+.rating-list {
+    max-width: 380px;
+    width: 100%;
 }
 
 
@@ -185,11 +174,12 @@ footer {
 }
 
 .designer-link {
+    max-width: 380px;
+    width: 100%;
     color: #A2A2A2;
-}
-
-.designer-link:hover,
-.designer-link:active {
-    color: #fff;
-    text-decoration-line: underline;
+    &:hover,
+    &:active {
+        color: #fff;
+        text-decoration-line: underline;
+    }
 }
