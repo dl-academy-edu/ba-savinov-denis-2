@@ -40,7 +40,7 @@ $primary-text-color: #fff;
             }
         }
     }
-    &footer__content_bottom {
+    &__content_bottom {
         border-top: #666666 solid 1px;
         padding: 23px 0 0;
     }
@@ -56,6 +56,9 @@ $primary-text-color: #fff;
         background-color: #666;
         border: 1px solid transparent;
         border-right: 0;
+        font-family: var(--font-opensans);
+        font-size: 16px;
+        line-height: 22px;
         &::placeholder {
             color: #EBEBEB;
         }
@@ -68,6 +71,7 @@ $primary-text-color: #fff;
     &__btn {
         max-width: 81px;
         width: 100%;
+        font-family: var(--font-opensans);
     }
 }
 
