@@ -1,46 +1,9 @@
-/* breadcrumbs */
-
-.breadcrumbs {
-    padding: 17px 0 50px;
-}
-
-
-/* category */
-
-.category-wrapper {
-    max-width: 1080px;
-    width: 100%;
-}
-
-.category-list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-}
-
-.category-item,
-.category-item-right:not(:nth-child(3n)) {
+@mixin category-item {
     margin-right: 20px;
     margin-bottom: 23px;
 }
 
-.category-item+.category-item-right {
-    margin-left: auto;
-}
-
-.category-link {
-    display: flex;
-    width: 280px;
-    height: 270px;
-    padding: 0 44px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.category-item-right h3,
-.category-item h3 {
+@mixin category-item-h3 {
     margin: auto;
     font-family: var(--font-montserrat);
     font-style: normal;
@@ -53,47 +16,95 @@
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
 }
 
-.category-item-right h3:hover,
-.category-item-right h3:active,
-.category-item h3:hover,
-.category-item h3:active {
+@mixin text-decoration-category {
     text-decoration-line: underline;
 }
 
-.category-one {
-    background: url(../../static/images/category-kids.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #DBE4DB;
+
+/* breadcrumbs */
+
+.breadcrumbs {
+    padding: 17px 0 50px;
 }
 
-.category-two {
-    background: url(../../static/images/category-holiday.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #EADDD3;
-}
 
-.category-three {
-    background: url(../../static/images/category-toys.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #F8F2DA;
-}
+/* category */
 
-.category-four {
-    background: url(../../static/images/category-accessories.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #D5D4E1;
-}
-
-.category-five {
-    background: url(../../static/images/category-sale.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #F3D0DB;
-}
-
-.category-six {
-    background: url(../../static/images/category-adults.png) no-repeat center;
-    background-blend-mode: multiply;
-    background-color: #E5EAF8;
+.category {
+    &__wrapper {
+        max-width: 1080px;
+        width: 100%;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+    &__link {
+        display: flex;
+        width: 280px;
+        height: 270px;
+        padding: 0 44px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    &__item_left {
+        @include category-item;
+        h3 {
+            @include category-item-h3;
+            &:active,
+            &:hover {
+                @include text-decoration-category;
+            }
+        }
+    }
+    &__item_right {
+        &:not(:nth-child(3n)) {
+            @include category-item;
+        }
+        h3 {
+            @include category-item-h3;
+            &:active,
+            &:hover {
+                @include text-decoration-category;
+            }
+        }
+    }
+    &__item_left+&__item_right {
+        margin-left: auto;
+    }
+    &__one {
+        background: url(../../static/images/category-kids.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #DBE4DB;
+    }
+    &__two {
+        background: url(../../static/images/category-holiday.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #EADDD3;
+    }
+    &__three {
+        background: url(../../static/images/category-toys.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #F8F2DA;
+    }
+    &__four {
+        background: url(../../static/images/category-accessories.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #D5D4E1;
+    }
+    &__five {
+        background: url(../../static/images/category-sale.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #F3D0DB;
+    }
+    &__six {
+        background: url(../../static/images/category-adults.png) no-repeat center;
+        background-blend-mode: multiply;
+        background-color: #E5EAF8;
+    }
 }
 
 
@@ -104,8 +115,7 @@
     width: 100%;
     margin-left: 200px;
     padding: 32px 0 39px;
-}
-
-.description-title {
-    margin: 0 0 24px;
+    &__title {
+        margin: 0 0 24px;
+    }
 }
