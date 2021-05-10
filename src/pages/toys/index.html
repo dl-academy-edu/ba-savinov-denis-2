@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7ae5092e20.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../../static/images/favicon.ico">
@@ -23,25 +25,25 @@
         </section>
         <section class="breadcrumbs container">
             <h2 class="visually-hidden">Breadcrumbs</h2>
-            <ul class="breadcrumbs-list">
-                <li><a class="breadcrumbs-link" href="/">Home</a></li>
-                <li><a class="breadcrumbs-link" href="catalog.html">Catalog</a></li>
-                <li class="breadcrumbs-item-active">Toys</li>
+            <ul class="breadcrumbs__list">
+                <li><a class="breadcrumbs__link" href="/">Home</a></li>
+                <li><a class="breadcrumbs__link" href="catalog.html">Catalog</a></li>
+                <li class="breadcrumbs__item_active">Toys</li>
             </ul>
         </section>
-        <section class="filter-block">
+        <section class="filters">
             <div class="container">
-                <div class="filter-cost">
+                <div class="cost">
                     <h3>Cost</h3>
-                    <input class="cost-range" type="range" name="cost" id="cost" min="0" max="500" value="105">
-                    <div class="cost-values">
-                        <span class="cost-values-min">0</span>
-                        <span class="cost-values-max">500</span>
+                    <input class="cost__range" type="range" name="cost" id="cost" min="0" max="500" value="105">
+                    <div class="cost__values">
+                        <span class="cost__values_min">0</span>
+                        <span class="cost__values_max">500</span>
                     </div>
                 </div>
-                <div class="filter-color">
+                <div class="color color-wrapper">
                     <h3>Color</h3>
-                    <ul class="filter-color-list">
+                    <ul class="color__list">
                         <li>
                             <input type="checkbox" name="color-item-checkbox" id="one-color" checked>
                             <label for="one-color">Black</label>
@@ -60,9 +62,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="filter-delivery">
+                <div class="delivery delivery-wrapper">
                     <h3>Delivery</h3>
-                    <ul class="filter-delivery-list">
+                    <ul class="delivery__list">
                         <li>
                             <input type="radio" name="delivery-item" id="delivery-item-one">
                             <label for="delivery-item-one">Free shipping</label>
@@ -73,9 +75,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="filter-amount">
+                <div class="amount amount-wrapper">
                     <h3>Amount</h3>
-                    <ul class="amount-list">
+                    <ul class="amount__list">
                         <li>
                             <input type="radio" name="amount-item" id="amount-one-btn" checked>
                             <label for="amount-one-btn">0-5</label>
@@ -90,63 +92,50 @@
                         </li>
                     </ul>
                 </div>
-                <button class="filter-apply-btn button">Apply</button>
+                <button class="filters__apply-btn button">Apply</button>
             </div>
         </section>
-        <section class="toys-list container">
+        <section class="toys container">
             <h2 class="visually-hidden">Toys list</h2>
-            <ul class="toys-list-block">
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/shark-bag.jpg" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">SHARKY BEAN BAG CHAIR COVER</h3>
-                        <span class="price-toy">$60.00 USD</span>
-                    </a>
-                </li>
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/deco-frames.png" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">BRASS DECO FRAMES</h3>
-                        <span class="price-toy">$66.00 USD</span>
-                    </a>
-                </li>
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/full-apron.png" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">CIBO FULL APRON</h3>
-                        <span class="price-toy">$60.00 USD</span>
-                    </a>
-                </li>
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/gumball-machine.jpg" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">GATCHA GATCHA GUMBALL MACHINE</h3>
-                        <span class="price-toy">$56.00 USD</span>
-                    </a>
-                </li>
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/scented-candle.png" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">CHRISTMAS ADVENT SCENTED CANDLE</h3>
-                        <span class="price-toy">$29.00 USD</span>
-                    </a>
-                </li>
-                <li class="toys-item-block">
-                    <a class="toys-item-link" href="#">
-                        <img src="../../static/images/toys/tea-light.png" alt="" height="385" width="380">
-                        <span class="toys-img-popup">LEARN MORE</span>
-                        <h3 class="toy-title">TANGLE SPINNING TEA LIGHT</h3>
-                        <span class="price-toy">$56.00 USD</span>
-                    </a>
-                </li>
+            <ul class="toys__list">
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/shark-bag.jpg",
+                    "title": "SHARKY BEAN BAG CHAIR COVER",
+                    "price": "60.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/deco-frames.png",
+                    "title": "BRASS DECO FRAMES",
+                    "price": "66.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/full-apron.png",
+                    "title": "CIBO FULL APRON",
+                    "price": "60.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/gumball-machine.jpg",
+                    "title": "GATCHA GATCHA GUMBALL MACHINE",
+                    "price": "56.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/scented-candle.png",
+                    "title": "CHRISTMAS ADVENT SCENTED CANDLE",
+                    "price": "29.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/tea-light.png",
+                    "title": "TANGLE SPINNING TEA LIGHT",
+                    "price": "56.00"
+                })
             </ul>
         </section>
-        <section class="articles-control container">
+        <section class="pagination container">
             @@include('pagination/index.html')
         </section>
     </main>

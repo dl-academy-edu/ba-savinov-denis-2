@@ -1,4 +1,4 @@
-let input = document.querySelector(".cost-range");
+let input = document.querySelector(".cost__range");
 actualizarInput(input);
 
 document.addEventListener("input", function(evt) {
