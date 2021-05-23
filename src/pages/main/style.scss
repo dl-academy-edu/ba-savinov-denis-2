@@ -262,6 +262,8 @@
         overflow: hidden;
         img {
             margin: -1px 0 0px -17px;
+            max-width: 514px;
+            width: 100%;
         }
     }
     &__content {
