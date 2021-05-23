@@ -3,7 +3,6 @@
         max-width: 380px;
         margin-top: 46px;
         text-align: center;
-
         &:not(:nth-child(3n)) {
             margin-right: 20px;
         }
@@ -16,8 +15,8 @@
     }
 
     &__popup {
-        display: none;
         position: absolute;
+        opacity: 0;
         top: 0;
         left: 0;
         transform: translate(43%, 43%);
@@ -28,19 +27,16 @@
         max-height: 207px;
         height: 100%;
         background: #E5EAF8;
-        opacity: 0.9;
         font-family: var(--font-montserrat);
         font-weight: bold;
         font-size: 26px;
         line-height: 29px;
         text-transform: uppercase;
-
+        transition: .4s;
         &:hover {
-            display: block;
+            opacity: 0.9;
         }
-
         &:active {
-            display: block;
             opacity: 0.67;
         }
     }
@@ -60,11 +56,10 @@
     }
 
     &__link img:hover+&__popup {
-        display: block;
+        opacity: 0.9;
     }
 
     &__link img:active+&__popup {
-        display: block;
         opacity: 0.67;
     }
 }

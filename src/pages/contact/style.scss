@@ -41,6 +41,7 @@
     }
     &__wrapper input:not([type=checkbox]) {
         @include contacts-wrapper;
+        transition: .4s;
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0.3);
         }
@@ -72,6 +73,7 @@
         label {
             position: relative;
             margin-left: 33px;
+            transition: .4s;
             &::before {
                 content: '';
                 position: absolute;

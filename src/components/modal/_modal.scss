@@ -41,6 +41,7 @@
         cursor: pointer;
         background: transparent;
         border: none;
+        transition: .4s;
         &:hover {
             opacity: 0.5;
         }
@@ -72,6 +73,7 @@
         }
         input:not([type=checkbox]) {
             @include contact-wrapper;
+            transition: .4s;
             &:hover {
                 border: 1px solid rgba(0, 0, 0, 0.3);
             }
@@ -98,6 +100,7 @@
             position: absolute;
             width: 0;
             height: 0;
+            transition: .4s;
             &:checked+label:after {
                 opacity: 1;
             }

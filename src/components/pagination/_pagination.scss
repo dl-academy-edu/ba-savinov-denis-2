@@ -24,6 +24,7 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
+        transition: .4s;
         &:hover:not(.page-item-active) {
             opacity: 0.5;
         }
@@ -41,4 +42,8 @@
             stroke-opacity: 0.5;
         }
     }
+}
+
+path {
+    transition: .4s;
 }
