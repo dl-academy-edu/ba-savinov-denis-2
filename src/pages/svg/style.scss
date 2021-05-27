@@ -1,0 +1,32 @@
+.svg-image {
+    padding-bottom: 60px;
+}
+.svg {      
+    cursor: pointer;
+    max-width: 418px;
+    width: 100%;
+    height: 351px;
+&__circle,
+&__rect_bottom,
+&__line-1,
+&__line-2 {
+    transition: .5s;
+}
+&:hover {
+    .svg__circle {
+        fill: #5D9CEC - 20;
+    }
+    .svg__rect_bottom {
+        fill: #5D9CEC - 20;
+    }
+    .svg__line-1 {
+        transform: translateX(200px);
+    }
+    .svg__line-2 {
+        transform: rotate3d(-5, -5, -5, 360deg);
+    }
+    .svg__line-3 {
+        transform: rotate(1deg);
+    }
+}
+}
