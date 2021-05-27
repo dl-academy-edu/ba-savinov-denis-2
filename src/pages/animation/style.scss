@@ -138,6 +138,17 @@
         width: 100%;
         z-index: 10;
     }
+    &__man-hand{
+        position: absolute;
+        left: 21%;
+        bottom: 49%;
+        max-width: 6%;
+        width: 100%;
+        z-index: 10;
+        -webkit-animation: 15s infinite man_hand;
+        animation: 15s infinite man_hand;
+        transform-origin: 5% 90%;
+    }
     &__man{
         position: absolute;
         left: 20%;
@@ -302,6 +313,16 @@
     }
     25%, 70% {
       opacity: 1;
+    }
+  }
+
+  @keyframes man_hand {
+    0%, 20%, 50%, 100% {
+        transform: rotate(150deg);
+    }
+    
+    40% {
+        transform: rotate(0);
     }
   }
 
