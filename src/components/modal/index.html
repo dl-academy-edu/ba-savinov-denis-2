@@ -24,7 +24,12 @@
             <input type="checkbox" name="agreement" id="agreement">
             <label for="agreement">By clicking on the button, you consent to the processing of your personal data</label>
         </fieldset>
-        <button class="contact-form__btn button" type="submit" id="contact-button" disabled>Submit</button>
+        @@include('btn-button/index.html', {
+            "type": "submit",
+            "id": "contact-button",
+            "class":"contact-form__btn",
+            "text": "Submit"
+            })
     </form>
     <button class="modal-window__btn_cross" type="button" aria-label="popup close"><img src="/static/images/cross.svg" alt="" width="15" height="15"></button>
 </div>

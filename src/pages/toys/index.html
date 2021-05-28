@@ -92,7 +92,12 @@
                         </li>
                     </ul>
                 </div>
-                <button class="filters__apply-btn button">Apply</button>
+                @@include('btn-button/index.html', {
+                    "type": "button",
+                    "id": "",
+                    "class":"filters__apply-btn",
+                    "text": "Apply"
+                    })
             </div>
         </section>
         <section class="toys container">

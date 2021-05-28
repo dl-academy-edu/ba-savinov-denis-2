@@ -42,7 +42,12 @@
                 <div class="slider__text">
                     <h1 class="slider__title slider__text-item">THE OOH NOO COLLECTION</h1>
                     <p class="slider__text-item">Designed in Slovenia</p>
-                    <button class="slider__text-btn button" type="button">EXPLORE NOW</button>
+                    @@include('btn-button/index.html', {
+                        "type": "button",
+                        "id": "",
+                        "class":"slider__text-btn",
+                        "text": "EXPLORE NOW"
+                        })
                 </div>
                 <img class="slider__img" src="/static/images/monster.png" alt="" width="636" height="489">
             </div>
@@ -97,7 +102,11 @@
                 </ul>
                 <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
                 <p>What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
-                <a href="#" class="delivery__learn-btn button">LEARN MORE</a>
+                @@include('btn-a/index.html', {
+                    "link": "#",
+                    "class":"delivery__learn-btn",
+                    "text": "LEARN MORE"
+                    })
             </div>
         </section>
         <section class="company">
@@ -116,7 +125,12 @@
                 <div class="about-us__wrapper">
                     <h3>About Us</h3>
                     <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-                    <button class="about-us__btn button">buy now</button>
+                    @@include('btn-button/index.html', {
+                        "type": "button",
+                        "id": "",
+                        "class":"about-us__btn",
+                        "text": "buy now"
+                        })
                 </div>
             </article>
             <article class="contacts">

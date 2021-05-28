@@ -1,4 +1,4 @@
-let starRating = document.querySelectorAll(".hov_star");
+let starRating = document.querySelectorAll(".star-rating__label");
 
 //star rating accessibility
 

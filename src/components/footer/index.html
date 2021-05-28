@@ -27,7 +27,12 @@
                 <h4 class="footer__titles">Connect</h4>
                 <form class="subscribe-form">
                     <input class="subscribe-form__input" type="email" name="email" placeholder="Email">
-                    <button class="subscribe-form__btn button" type="submit">Join</button>
+                    @@include('btn-button/index.html', {
+                        "type": "submit",
+                        "id": "",
+                        "class":"subscribe-form__btn",
+                        "text": "Join"
+                        })
                 </form>
                 <div class="socials">
                     <ul class="socials__list">
@@ -50,15 +55,25 @@
         <div class="footer__content_bottom footer__lists">
             <div class="star-rating">
                 <input class="star-rating__input" type="radio" id="star-rating-5" name="star" value="5">
-                <label class="star-rating__label fas fa-star hov_star" for="star-rating-5" tabindex="0" aria-label="Company Rating 5 star"></label>
+                <label class="star-rating__label" for="star-rating-5" tabindex="0" aria-label="Company Rating 5 star">
+                    @@include('star/index.html')
+                </label>
                 <input class="star-rating__input" type="radio" id="star-rating-4" name="star" value="4">
-                <label class="star-rating__label fas fa-star hov_star" for="star-rating-4" tabindex="0" aria-label="Company Rating 4 star"></label>
+                <label class="star-rating__label" for="star-rating-4" tabindex="0" aria-label="Company Rating 4 star">
+                    @@include('star/index.html')
+                </label>
                 <input class="star-rating__input" type="radio" id="star-rating-3" name="star" value="3">
-                <label class="star-rating__label fas fa-star hov_star" for="star-rating-3" tabindex="0" aria-label="Company Rating 3 star"></label>
+                <label class="star-rating__label" for="star-rating-3" tabindex="0" aria-label="Company Rating 3 star">
+                    @@include('star/index.html')
+                </label>
                 <input class="star-rating__input" type="radio" id="star-rating-2" name="star" value="2">
-                <label class="star-rating__label fas fa-star hov_star" for="star-rating-2" tabindex="0" aria-label="Company Rating 2 star"></label>
+                <label class="star-rating__label" for="star-rating-2" tabindex="0" aria-label="Company Rating 2 star">
+                    @@include('star/index.html')
+                </label>
                 <input class="star-rating__input" type="radio" id="star-rating-1" name="star" value="1">
-                <label class="star-rating__label fas fa-star hov_star" for="star-rating-1" tabindex="0" aria-label="Company Rating 1 star"></label>
+                <label class="star-rating__label" for="star-rating-1" tabindex="0" aria-label="Company Rating 1 star">
+                    @@include('star/index.html')
+                </label>
                 <span class="star-rating__text">Company Rating</span>
             </div>
             <span class="copyright">Copyright © 2018 Dlk • Design Life Kids</span>

@@ -146,6 +146,9 @@ $primary-text-color: #fff;
     &:hover &__text {
         color: #C29974;
     }
+    // &__star-path {
+    //     fill: #C29974;
+    // }
     &__label {
         color: $primary-text-color;
         padding-left: 5px;
@@ -168,14 +171,19 @@ $primary-text-color: #fff;
     & &__label:last-of-type {
         padding-left: 28px;
     }
+    
     &__label:hover,
     &__label:hover~&__label,
     &__label:focus~&__label {
-        color: #836E5B;
+        .star-rating__star-path {
+            fill: #836E5B;
+        }
     }
     &__input:checked~&__label,
     &__input:not(:checked)>&__label:hover,
-    &__input:not(:checked)>&__label:hover~.rating-item {
-        color: #C29974;
+    &__input:not(:checked)>&__label:hover~&__label {
+        .star-rating__star-path {
+            fill: #C29974;
+        }
     }
 }

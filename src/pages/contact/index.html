@@ -52,7 +52,12 @@
                         <input type="checkbox" name="agreement" id="agreement">
                         <label for="agreement" tabindex="0">By clicking on the button, you consent to the processing of your personal data</label>
                     </fieldset>
-                    <button class="contacts__btn button" type="submit" id="contact-button" disabled>Submit</button>
+                    @@include('btn-button/index.html', {
+                        "type": "submit",
+                        "id": "contact-button",
+                        "class":"contacts__btn",
+                        "text": "Submit"
+                        })
                 </form>
             </div>
             <div class="block-text">
