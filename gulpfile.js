@@ -77,6 +77,11 @@ function img(src, dest) {
     fs.copy(src, dest);
     // TODO: нужно сделать оптимизацию картинок
 }
+function audio(src, dest) {
+    fs.mkdirSync(dest, { recursive: true });
+    fs.copy(src, dest);
+    // TODO: нужно сделать оптимизацию картинок
+}
 
 // Функция сборки проекта
 async function buildProject() {
@@ -113,6 +118,8 @@ async function buildProject() {
     scss("./src/components/common.scss", `./${finalFolder}`);
     // Обработка картинок
     img("./src/static/images", `./${finalFolder}/static/images`);
+    //обработка звуков
+    audio("./src/static/audio", `./${finalFolder}/static/audio`);
     // Обработка шрифтов
     // fonts("./src/static/fonts", `./${finalFolder}/static/fonts`);
 }
