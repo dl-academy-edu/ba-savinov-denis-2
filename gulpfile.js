@@ -66,11 +66,11 @@ function js(src, dest) {
         .pipe(browserSync.reload({ stream: true }));
 }
 // Функция обработки шрифтов
-// function fonts(src, dest) {
-//   fs.mkdirSync(dest, {recursive: true});
-//   fs.copy(src, dest);
-//   // TODO: нужно сделать оптимизацию шрифтов
-// }
+function fonts(src, dest) {
+  fs.mkdirSync(dest, {recursive: true});
+  fs.copy(src, dest);
+  // TODO: нужно сделать оптимизацию шрифтов
+}
 // Функция обработки картинок
 function img(src, dest) {
     fs.mkdirSync(dest, { recursive: true });
@@ -80,7 +80,6 @@ function img(src, dest) {
 function audio(src, dest) {
     fs.mkdirSync(dest, { recursive: true });
     fs.copy(src, dest);
-    // TODO: нужно сделать оптимизацию картинок
 }
 
 // Функция сборки проекта
@@ -121,7 +120,7 @@ async function buildProject() {
     //обработка звуков
     audio("./src/static/audio", `./${finalFolder}/static/audio`);
     // Обработка шрифтов
-    // fonts("./src/static/fonts", `./${finalFolder}/static/fonts`);
+    fonts("./src/static/fonts", `./${finalFolder}/static/fonts`);
 }
 
 // Функция которая слушает изменения файлов в проекте

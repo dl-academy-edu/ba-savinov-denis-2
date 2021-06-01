@@ -1,0 +1,24 @@
+:root {
+    --font-opensans: 'Open Sans', Verdana, sans-serif;
+    --font-montserrat: 'Montserrat', Verdana, sans-serif;
+    --font-roboto: 'Roboto', Arial, sans-serif;
+    --font-crimsontext: 'Crimson Text', 'Times New Roman', serif;
+    --font-lato: 'Lato', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/static/fonts/Lato-Bold.woff2') format('woff2'),
+         url('/static/fonts/Lato-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: 
+         url('/static/fonts/Lato-Medium.woff2') format('woff2'),
+         url('/static/fonts/Lato-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
