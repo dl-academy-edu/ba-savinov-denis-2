@@ -100,6 +100,30 @@ h2 {
     }
 }
 
+
+@media screen and (max-width: 1200px) { 
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 648px;
+    }
+}
+
+
+@media screen and (max-width: 576px) { 
+   
+}
+
+@media screen and (max-width: 375px) {
+   
+}
+
+
+
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
@@ -107,5 +131,6 @@ h2 {
 @import "./pagination/pagination";
 @import "./article/article";
 @import "./toys/toys";
+@import "./mobile-menu/mobile-menu";
 @import "./variables.scss";
 // @import url("variables.css");

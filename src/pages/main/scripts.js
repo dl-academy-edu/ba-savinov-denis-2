@@ -7,6 +7,7 @@ let modalCloseBtn = document.querySelector(".modal-window__btn_cross"),
     overlay = document.querySelector(".modal-overlay");
 
 
+    
 // Modal window open
 
 modalOpenBtn.addEventListener('click', () => {

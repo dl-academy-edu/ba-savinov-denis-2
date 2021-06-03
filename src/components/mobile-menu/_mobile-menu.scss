@@ -1,0 +1,71 @@
+
+.header-mobile {
+    position: fixed;
+    background: rgba(125, 151, 218, 0.8);
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: 10;
+    &__container {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 36px 0;
+        .search-form__img {
+            top: 4px;
+        }
+    }
+    &__btn_close {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+            vertical-align: middle;
+        }
+    }
+    &__menu {
+        text-align: center;
+        padding-bottom: 25px;
+        .header-mobile__contact-link {  /* для добавления веса, перебить правило (.header a) */
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 32px;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+    }
+    &__item{
+        a{
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+    
+    &-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header-mobile {
+        &__top {
+            padding: 24px 0;
+            .search-form__img {
+                top: -1px;
+            }
+        }
+    }
+    
+}

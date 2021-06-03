@@ -1,4 +1,4 @@
-<header class="header container">
+<header class="header container header__container-mobile">
     <a href="/"><img src="/static/images/DLK-logo.svg" alt="logo" class="logo" width="100" height="52"></a>
     <nav class="header__nav" aria-label="Main menu">
         <ul class="header__list">
@@ -10,9 +10,11 @@
             <li class="header__item"><a href="/pages/grid/">Grid</a></li>
         </ul>
     </nav>
+    <button class="header__mobile-btn_open" type="button" id="mobile-btn-open">menu</button>
     <form class="search-form" action="#" method="post">
         <input class="search-form__text" type="search" placeholder="Search here...">
         <img class="search-form__img" src="/static/images/search.svg" alt="" width="24" height="24">
     </form>
     <a class="header__contact-link" href="/pages/contact/">Contact Us</a>
+    @@include('mobile-menu/index.html')
 </header>
