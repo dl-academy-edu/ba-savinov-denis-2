@@ -16,7 +16,7 @@
         "gulp-uglify": "^3.0.2",
         "node-sass": "^5.0.0",
         "path": "^0.12.7",
-        "swiper": "^6.5.9"
+        "swiper": "^6.7.0"
     },
     "scripts": {
         "start": "node ./node_modules/gulp/bin/gulp.js start",
@@ -26,8 +26,8 @@
         "defaults"
     ],
     "devDependencies": {
-        "@babel/core": "^7.14.0",
-        "@babel/preset-env": "^7.14.0",
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.4",
         "gulp-babel": "^8.0.0"
     }
 }
