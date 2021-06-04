@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7ae5092e20.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>DLK</title>
+
+</head>
+
+<body>
+    @@include('header/index.html')
+    <main class="container">
+        <section class="slider slider-container">
+            <div class="slider__body">
+                <div class="slider__control">
+                    <div class="slider__counter">01</div>
+                    <div class="slider__toggle">
+                        <ul>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn slider__toggle-btn_active" aria-label="button slide one" type="button" data-slidenumber="01"></button>
+                            </li>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide two" type="button" data-slidenumber="02"></button>
+                            </li>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide three" type="button" data-slidenumber="03"></button>
+                            </li>
+                            <li class="slider__toggle-item">
+                                <button class="slider__toggle-btn" aria-label="button slide four" type="button" data-slidenumber="04"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slider__text">
+                    <h1 class="slider__title slider__text-item">THE OOH NOO COLLECTION</h1>
+                    <p class="slider__text-item">Designed in Slovenia</p>
+                    @@include('btn-button/index.html', { "type": "button", "id": "", "class":"slider__text-btn", "text": "EXPLORE NOW" })
+                </div>
+                <img class="slider__img" src="/static/images/monster.png" alt="" width="636" height="489">
+            </div>
+            <div class="slider__footer">
+                <p>Free (continental) USA shipping on all orders of $100 USD or more!</p>
+            </div>
+        </section>
+        <section class="category swiper-container">
+            <h2 class="category__title">Category Products</h2>
+            <div class="category__wrapper swiper-wrapper">
+                <a class="category__item category__item_one swiper-slide" href="#">
+                    <h3>APPAREL KIDS</h3>
+                </a>
+                <a class="category__item category__item_two swiper-slide" href="#">
+                    <h3>HOLIDAY SHOP</h3>
+                </a>
+                <a class="category__item category__item_three swiper-slide" href="pages/toys/">
+                    <h3>TOYS</h3>
+                </a>
+                <a class="category__item category__item_four swiper-slide" href="#">
+                    <h3>ACCESSORIES</h3>
+                </a>
+                <a class="category__item category__item_five swiper-slide" href="#">
+                    <h3>SALE</h3>
+                </a>
+                <a class="category__item category__item_six swiper-slide" href="#">
+                    <h3>APPAREL ADULTS</h3>
+                </a>
+            </div>
+            <div class="control">
+                <button class="control__btn_prev" aria-label="button previous category" type="button"></button>
+                <button class="control__btn_next" aria-label="button next category" type="button"></button>
+                <p class="control__description">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+            </div>
+        </section>
+        <section class="delivery">
+            <div class="delivery__crop-img">
+                <img src="/static/images/woman.jpg" alt="delivery-img">
+            </div>
+            <div class="delivery__content">
+                <h2 class="delivery__title">Delivery</h2>
+                <ul class="delivery__menu">
+                    <li class="delivery__menu-item delivery__menu-item_active">
+                        <a href="#">Delivery</a>
+                    </li>
+                    <li class="delivery__menu-item">
+                        <a href="#">Guarantee</a>
+                    </li>
+                    <li class="delivery__menu-item">
+                        <a href="#">Credit</a>
+                    </li>
+                </ul>
+                <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                <p>What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+                @@include('btn-a/index.html', { "link": "#", "class":"delivery__learn-btn", "text": "LEARN MORE" })
+            </div>
+        </section>
+        <section class="company">
+            <h2 class="visually-hidden">Company</h2>
+            <ul class="company__list">
+                <li><img src="/static/images/company/mail-group.png" alt="" width="193" height="60"></li>
+                <li><img src="/static/images/company/apple.png" alt="" width="179" height="61"></li>
+                <li><img src="/static/images/company/eltex.png" alt="" width="216" height="46"></li>
+                <li><img src="/static/images/company/owox.png" alt="" width="211" height="40"></li>
+            </ul>
+        </section>
+        <section class="dlk-info">
+            <h2 class="visually-hidden">DLK info</h2>
+            <article class="about-us dlk-info__item">
+                <h2 class="about-us__titles">Design Life Kids</h2>
+                <div class="about-us__wrapper">
+                    <h3>About Us</h3>
+                    <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                    @@include('btn-button/index.html', { "type": "button", "id": "", "class":"about-us__btn", "text": "buy now" })
+                </div>
+            </article>
+            <article class="contacts">
+                <h2 class="contacts__titles">Contacts</h2>
+                <div class="contacts__wrapper">
+                    <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                </div>
+                <iframe title="Map of where we are" class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2651.820908703631!2d-122.420958355798!3d37.77681338703293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809969fa0579%3A0xa828d2bfd4ce59fb!2s240%20Van%20Ness%20Ave%2C%20San%20Francisco%2C%20CA%2094102%2C%20USA!5e0!3m2!1sen!2sru!4v1617131216820!5m2!1sen!2sru"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </article>
+        </section>
+    </main>
+    @@include('footer/index.html') @@include('modal/index.html')
+
+    <script src="scripts.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="star-rating.js"></script>
+    <script src="contact-form.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="swiper-slider.js"></script>
+</body>
+
+</html>

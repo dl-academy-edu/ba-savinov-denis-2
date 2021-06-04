@@ -1,0 +1,49 @@
+/* articles-control */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 47px;
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding-left: 65px;
+        li {
+            margin-right: 66px;
+        }
+    }
+    &__item {
+        font-family: var(--font-montserrat);
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        transition: .4s;
+        &:hover:not(.page-item-active) {
+            opacity: 0.5;
+        }
+    }
+    &__item_active {
+        color: #C29974;
+    }
+    &__btn-prev,
+    &__btn-next {
+        &:hover svg path {
+            stroke: #C29974;
+            stroke-opacity: 1;
+        }
+        &:active svg path {
+            stroke-opacity: 0.5;
+        }
+    }
+}
+
+path {
+    transition: .4s;
+}

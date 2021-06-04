@@ -1,0 +1,136 @@
+body {
+    font-family: var(--font-opensans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+}
+
+a {
+    text-decoration: none;
+    color: #1E0606;
+}
+
+h1,
+h2 {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: #1E0606;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px 22px;
+    border: none;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    &:disabled {
+        background: #C1C1C1;
+        color: #E1E1E1;
+    }
+}
+
+.page-title {
+    margin: 0;
+    font-size: 40px;
+    line-height: 49px;
+}
+
+
+/*breadcrumbs*/
+
+.breadcrumbs {
+    font-family: var(--font-crimsontext);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 16px 0 50px;
+    &__list {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-right: 20px;
+        }
+    }
+    &__link::after {
+        content: '';
+        display: inline-block;
+        background-image: url('../static/images/next-arrow.svg');
+        background-size: 9px 12px;
+        background-repeat: no-repeat;
+        margin-left: 20px;
+        height: 12px;
+        width: 9px;
+    }
+    &__item_active {
+        text-transform: capitalize;
+        opacity: 0.5;
+    }
+}
+
+
+@media screen and (max-width: 1200px) { 
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 648px;
+    }
+}
+
+
+@media screen and (max-width: 576px) { 
+   
+}
+
+@media screen and (max-width: 375px) {
+   
+}
+
+
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./modal/modal";
+@import "./pagination/pagination";
+@import "./article/article";
+@import "./toys/toys";
+@import "./mobile-menu/mobile-menu";
+@import "./variables.scss";
+// @import url("variables.css");

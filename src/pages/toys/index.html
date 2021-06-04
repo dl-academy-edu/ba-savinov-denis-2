@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7ae5092e20.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico">
+    <title>Toys</title>
+
+</head>
+
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="container">
+            <h1 class="page-title">Toy for kids</h1>
+        </section>
+        <section class="breadcrumbs container">
+            <h2 class="visually-hidden">Breadcrumbs</h2>
+            <ul class="breadcrumbs__list">
+                <li><a class="breadcrumbs__link" href="/">Home</a></li>
+                <li><a class="breadcrumbs__link" href="../catalog/">Catalog</a></li>
+                <li class="breadcrumbs__item_active">Toys</li>
+            </ul>
+        </section>
+        <section class="filters">
+            <div class="container">
+                <div class="cost">
+                    <h3>Cost</h3>
+                    <input class="cost__range" type="range" name="cost" id="cost" min="0" max="500" value="105">
+                    <div class="cost__values">
+                        <span class="cost__values_min">0</span>
+                        <span class="cost__values_max">500</span>
+                    </div>
+                </div>
+                <div class="color color-wrapper">
+                    <h3>Color</h3>
+                    <ul class="color__list">
+                        <li>
+                            <input type="checkbox" name="color-item-checkbox" id="one-color" checked>
+                            <label for="one-color">Black</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="color-item-checkbox" id="two-color">
+                            <label for="two-color">Blue</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="color-item-checkbox" id="three-color">
+                            <label for="three-color">Green</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="color-item-checkbox" id="four-color">
+                            <label for="four-color">White</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery delivery-wrapper">
+                    <h3>Delivery</h3>
+                    <ul class="delivery__list">
+                        <li>
+                            <input type="radio" name="delivery-item" id="delivery-item-one">
+                            <label for="delivery-item-one">Free shipping</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="delivery-item" id="delivery-item-two" checked>
+                            <label for="delivery-item-two">Fast shipping</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="amount amount-wrapper">
+                    <h3>Amount</h3>
+                    <ul class="amount__list">
+                        <li>
+                            <input type="radio" name="amount-item" id="amount-one-btn" checked>
+                            <label for="amount-one-btn">0-5</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="amount-item" id="amount-two-btn">
+                            <label for="amount-two-btn">10-20</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="amount-item" id="amount-three-btn">
+                            <label for="amount-three-btn">20-50</label>
+                        </li>
+                    </ul>
+                </div>
+                @@include('btn-button/index.html', {
+                    "type": "button",
+                    "id": "",
+                    "class":"filters__apply-btn",
+                    "text": "Apply"
+                    })
+            </div>
+        </section>
+        <section class="toys container">
+            <h2 class="visually-hidden">Toys list</h2>
+            <ul class="toys__list">
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/shark-bag.jpg",
+                    "title": "SHARKY BEAN BAG CHAIR COVER",
+                    "price": "60.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/deco-frames.png",
+                    "title": "BRASS DECO FRAMES",
+                    "price": "66.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/full-apron.png",
+                    "title": "CIBO FULL APRON",
+                    "price": "60.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/gumball-machine.jpg",
+                    "title": "GATCHA GATCHA GUMBALL MACHINE",
+                    "price": "56.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/scented-candle.png",
+                    "title": "CHRISTMAS ADVENT SCENTED CANDLE",
+                    "price": "29.00"
+                })
+
+                @@include('toys/index.html', {
+                    "url-img": "../../static/images/toys/tea-light.png",
+                    "title": "TANGLE SPINNING TEA LIGHT",
+                    "price": "56.00"
+                })
+            </ul>
+        </section>
+        <section class="pagination container">
+            @@include('pagination/index.html')
+        </section>
+    </main>
+    @@include('footer/index.html')
+    <script src="index.js"></script>
+    <script src="../../mobile-menu.js"></script>
+</body>
+
+</html>

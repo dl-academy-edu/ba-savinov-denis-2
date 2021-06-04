@@ -1,0 +1,189 @@
+$primary-text-color: #fff;
+.footer {
+    background: #434343;
+    padding: 100px 0;
+    &__content_top {
+        padding-bottom: 14px;
+    }
+    &__titles {
+        font-weight: normal;
+        color: #aaa;
+        border-bottom: #666666 solid 1px;
+        padding-bottom: 22px;
+        margin: 0;
+    }
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__customer-info,
+    &__navigation,
+    &__connect {
+        max-width: 380px;
+        width: 100%;
+    }
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 28px;
+        li {
+            padding-bottom: 15px;
+            a {
+                color: $primary-text-color;
+                transition: .4s;
+                &:hover {
+                    opacity: 0.5;
+                }
+                &:active {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    &__content_bottom {
+        border-top: #666666 solid 1px;
+        padding: 23px 0 0;
+    }
+}
+
+.subscribe-form {
+    display: flex;
+    padding-top: 26px;
+    &__input {
+        width: 100%;
+        padding-left: 15px;
+        color: #EBEBEB;
+        background-color: #666;
+        border: 1px solid transparent;
+        border-right: 0;
+        font-family: var(--font-opensans);
+        font-size: 16px;
+        line-height: 22px;
+        transition: .4s;
+        &::placeholder {
+            color: #EBEBEB;
+        }
+        &:hover,
+        &:active {
+            border: 1px solid #FFFDFD;
+            border-right: 0;
+        }
+    }
+    &__btn {
+        max-width: 81px;
+        width: 100%;
+        font-family: var(--font-opensans);
+    }
+}
+
+.socials {
+    padding-top: 29px;
+    &__list {
+        display: flex;
+        font-size: 14px;
+        list-style-type: none;
+        padding-left: 11px;
+        margin: 0;
+        li:not(:first-child) {
+            padding-left: 28px;
+        }
+    }
+    &__link {
+        position: relative;
+        z-index: 0;
+        color: $primary-text-color;
+        transition: .4s;
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 0.2;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #666666;
+            z-index: -1;
+        }
+    }
+}
+
+.copyright {
+    max-width: 380px;
+    width: 100%;
+    color: $primary-text-color;
+    &__link {
+        max-width: 380px;
+        width: 100%;
+        color: #A2A2A2;
+        transition: .4s;
+        &:hover,
+        &:active {
+            color: $primary-text-color;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+
+/* Star rating */
+
+.star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 380px;
+    width: 100%;
+    transition: .4s;
+    &:hover &__text {
+        color: #C29974;
+    }
+    // &__star-path {
+    //     fill: #C29974;
+    // }
+    &__label {
+        color: $primary-text-color;
+        padding-left: 5px;
+        font-size: 13px;
+        cursor: pointer;
+        color: $primary-text-color;
+        transition: .4s;
+        text-decoration: none;
+    }
+    &__input {
+        display: none;
+    }
+    &__input:checked~&__text {
+        color: #C29974;
+    }
+    &__text {
+        transition: .4s;
+        color: $primary-text-color;
+    }
+    & &__label:last-of-type {
+        padding-left: 28px;
+    }
+    
+    &__label:hover,
+    &__label:hover~&__label,
+    &__label:focus~&__label {
+        .star-rating__star-path {
+            fill: #836E5B;
+        }
+    }
+    &__input:checked~&__label,
+    &__input:not(:checked)>&__label:hover,
+    &__input:not(:checked)>&__label:hover~&__label {
+        .star-rating__star-path {
+            fill: #C29974;
+        }
+    }
+}
