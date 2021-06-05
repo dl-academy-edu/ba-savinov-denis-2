@@ -44,7 +44,12 @@
                     <p class="slider__text-item">Designed in Slovenia</p>
                     @@include('btn-button/index.html', { "type": "button", "id": "", "class":"slider__text-btn", "text": "EXPLORE NOW" })
                 </div>
-                <img class="slider__img" src="/static/images/monster.png" alt="" width="636" height="489">
+                <picture class="slider__img-box">
+                    <source srcset="/static/images/monster-mobile.png, /static/images/monster-mobile@2x.png 2x" media="(max-width: 375px)">
+                    <source srcset="/static/images/monster-tablet.png, /static/images/monster-tablet@2x.png 2x" media="(max-width: 768px)">
+                    <source srcset="/static/images/monster.png, /static/images/monster@2x.png 2x">
+                    <img class="slider__img" src="../../static/images/poster.png" alt="Monster image"/>
+                  </picture>
             </div>
             <div class="slider__footer">
                 <p>Free (continental) USA shipping on all orders of $100 USD or more!</p>
@@ -80,7 +85,12 @@
         </section>
         <section class="delivery">
             <div class="delivery__crop-img">
-                <img src="/static/images/woman.jpg" alt="delivery-img">
+                <picture class="delivery__img-box">
+                    <source srcset="/static/images/woman-mobile.jpg, /static/images/woman-mobile@2x.jpg 2x" media="(max-width: 375px)">
+                    <source srcset="/static/images/woman-tablet.jpg, /static/images/woman-tablet@2x.jpg 2x" media="(max-width: 768px)">
+                    <source srcset="/static/images/woman.jpg, /static/images/woman@2x.jpg 2x">
+                    <img class="delivery__img" src="/static/images/woman.jpg" alt="Woman photo"/>
+                  </picture>
             </div>
             <div class="delivery__content">
                 <h2 class="delivery__title">Delivery</h2>

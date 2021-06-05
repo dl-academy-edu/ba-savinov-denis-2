@@ -383,3 +383,151 @@
         border: 0;
     }
 }
+
+@media screen and (max-width: 768px) { 
+    .category {
+        &__item_one {
+            background: url(/static/images/category-kids-tablet.png) no-repeat center;
+            background-color: #DBE4DB;
+        }
+        &__item_two {
+            background: url(/static/images/category-holiday-tablet.png) no-repeat center;
+            background-color: #EADDD3;
+        }
+        &__item_three {
+            background: url(/static/images/category-toys-tablet.png) no-repeat center;
+            background-color: #F8F2DA;
+        }
+        &__item_four {
+            background: url(/static/images/category-accessories-tablet.png) no-repeat center;
+            background-color: #D5D4E1;
+        }
+        &__item_five {
+            background: url(/static/images/category-sale-tablet.png) no-repeat center;
+            background-color: #F3D0DB;
+        }
+        &__item_six {
+            background: url(/static/images/category-adults-tablet.png) no-repeat center;
+            background-color: #E5EAF8;
+        }
+    }
+}
+@media screen and (max-width: 375px) { 
+    .category {
+        &__item_one {
+            background: url(/static/images/category-kids-mobile.png) no-repeat center;
+            background-color: #DBE4DB;
+        }
+        &__item_two {
+            background: url(/static/images/category-holiday-mobile.png) no-repeat center;
+            background-color: #EADDD3;
+        }
+        &__item_three {
+            background: url(/static/images/category-toys-mobile.png) no-repeat center;
+            background-color: #F8F2DA;
+        }
+        &__item_four {
+            background: url(/static/images/category-accessories-mobile.png) no-repeat center;
+            background-color: #D5D4E1;
+        }
+        &__item_five {
+            background: url(/static/images/category-sale-mobile.png) no-repeat center;
+            background-color: #F3D0DB;
+        }
+        &__item_six {
+            background: url(/static/images/category-adults-mobile.png) no-repeat center;
+            background-color: #E5EAF8;
+        }
+    }
+}
+
+
+//retina display min-resolution: 2dppx
+
+@media screen and (min-resolution: 2dppx) and (min-width: 769px){
+    .category {
+        &__item_one {
+            background: 280px 270px url(/static/images/category-kids@2x.png) no-repeat center;
+            background-color: #DBE4DB;
+
+        }
+        &__item_two {
+            background: 280px 270px url(/static/images/category-holiday@2x.png) no-repeat center;
+            background-color: #EADDD3;
+        }
+        &__item_three {
+            background: 280px 270px url(/static/images/category-toys@2x.png) no-repeat center;
+            background-color: #F8F2DA;
+        }
+        &__item_four {
+            background: 280px 270px url(/static/images/category-accessories@2x.png) no-repeat center;
+            background-color: #D5D4E1;
+        }
+        &__item_five {
+            background: 280px 270px url(/static/images/category-sale@2x.png) no-repeat center;
+            background-color: #F3D0DB;
+        }
+        &__item_six {
+            background: 280px 270px url(/static/images/category-adults@2x.png) no-repeat center;
+            background-color: #E5EAF8;
+        }
+    }
+}
+
+
+@media screen and (min-resolution: 2dppx) and (max-width: 768px) { 
+    .category {
+        &__item_one {
+            background: 258px 249px url(/static/images/category-kids-tablet@2x.png) no-repeat center;
+            background-color: #DBE4DB;
+        }
+        &__item_two {
+            background: 258px 249px url(/static/images/category-holiday-tablet@2x.png) no-repeat center;
+            background-color: #EADDD3;
+        }
+        &__item_three {
+            background: 258px 249px url(/static/images/category-toys-tablet@2x.png) no-repeat center;
+            background-color: #F8F2DA;
+        }
+        &__item_four {
+            background: 258px 249px url(/static/images/category-accessories-tablet@2x.png) no-repeat center;
+            background-color: #D5D4E1;
+        }
+        &__item_five {
+            background: 258px 249px url(/static/images/category-sale-tablet@2x.png) no-repeat center;
+            background-color: #F3D0DB;
+        }
+        &__item_six {
+            background: 258px 249px url(/static/images/category-adults-tablet@2x.png) no-repeat center;
+            background-color: #E5EAF8;
+        }
+    }
+}
+@media screen and (min-resolution: 2dppx) and (max-width: 375px) { 
+    .category {
+        &__item_one {
+            background: 247px 238px url(/static/images/category-kids-mobile@2x.png) no-repeat center;
+            background-color: #DBE4DB;
+        }
+        &__item_two {
+            background: 247px 238px url(/static/images/category-holiday-mobile@2x.png) no-repeat center;
+            background-color: #EADDD3;
+        }
+        &__item_three {
+            background: 247px 238px url(/static/images/category-toys-mobile@2x.png) no-repeat center;
+            background-color: #F8F2DA;
+        }
+        &__item_four {
+            background: 247px 238px url(/static/images/category-accessories-mobile@2x.png) no-repeat center;
+            background-color: #D5D4E1;
+        }
+        &__item_five {
+            background: 247px 238px url(/static/images/category-sale-mobile@2x.png) no-repeat center;
+            background-color: #F3D0DB;
+        }
+        &__item_six {
+            background: 247px 238px url(/static/images/category-adults-mobile@2x.png) no-repeat center;
+            background-color: #E5EAF8;
+        }
+    }
+}

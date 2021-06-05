@@ -215,18 +215,6 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            // z-index: 1;
-            // &::before {
-            //     content: ' ';
-            //     position: absolute;
-            //     width: 61px;
-            //     height: 16px;
-            //     left: -0.8%;
-            //     bottom: 20%;
-            //     background: #fa684f;
-            //     border-radius: 3px;
-            //     z-index: -1;
-            // }
         }
         h3 {
             @include font-lato (22px, 700, 26px);
