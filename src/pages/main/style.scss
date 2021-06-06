@@ -384,7 +384,58 @@
     }
 }
 
+@media screen and (max-width: 1200px) { 
+    .slider{
+        &__img-box {
+            align-self: flex-end;
+            width: 17vw;
+        }
+        &__img {
+            margin-top: 0;
+            max-width: 43vw;
+            float: right;
+
+        }
+        &__counter {
+            font-size: 48px;
+            line-height: 59px;
+        }
+        &-container {
+            margin-top: 0;
+        }
+        &__toggle-btn {
+            width: 27px;
+            height: 2.67px;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) { 
+    .slider {
+        &__control {
+            margin-top: 16px;
+            margin-left: 0;
+            width: 10%;
+        }
+        &__toggle ul {
+            margin: 5px 0 50px 0px;
+        }
+        &__toggle-item {
+            margin-bottom: 9px;
+        }
+        &__text {
+            padding: 77px 0 0 11px;
+        }
+        &__img {
+            max-width: none;
+        }
+        &__body {
+            padding-right: 10px;
+            padding-bottom: 27px;
+            min-height: 48.7vw;
+        }
+    }
+    
     .category {
         &__item_one {
             background: url(/static/images/category-kids-tablet.png) no-repeat center;
@@ -412,7 +463,75 @@
         }
     }
 }
+
+@media screen and (min-width: 576px) and (max-width: 767px) { 
+    .slider__img {
+        max-width: 58vw;
+    }
+
+}
+
+@media screen and (max-width: 576px) { 
+    .slider {
+        &__title {
+            font-size: 36px;
+            line-height: 110%;
+        }
+        &__text p {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__text-btn {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 575px) { 
+    .slider__img {
+        max-width: 40vw;
+    }
+}
+
 @media screen and (max-width: 375px) { 
+    .slider {
+        &__control {
+            order: 1;
+            margin-top: 23px;
+            width: 30%;
+        }
+        &__text-btn {
+            max-width: 142px;
+        }
+        &__toggle {
+            margin-left: 23px;
+        }
+        &__body {
+            position: relative;
+            min-height: 116.7vw;
+        }
+        &__text {
+            padding: 83px 0 0 20px;
+        }
+        &__img-box {
+            position: absolute;
+            right: 0;
+            bottom: 6%;
+        }
+        &__img {
+            max-width: 79vw;
+        }
+        &__text-item {
+            margin: 0 0 15px;
+        }
+        &__footer {
+            p {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
     .category {
         &__item_one {
             background: url(/static/images/category-kids-mobile.png) no-repeat center;
@@ -441,7 +560,29 @@
     }
 }
 
+@media screen and (max-width: 374px) { 
+    .slider{
+        &__text {
+            padding: 0;
+            padding: 10vw 0 0;
+        }
+        &__title {
+            font-size: 1.6rem;
+        }
+        &__body {
+            position: relative;
+            min-height: 111vw;
+        }
+        &__img {
+            max-width: 65vw;
+        }
+    }
 
+    .container {
+        width: 90%;
+    }
+
+}
 //retina display min-resolution: 2dppx
 
 @media screen and (min-resolution: 2dppx) and (min-width: 769px){
