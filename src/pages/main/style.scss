@@ -299,8 +299,8 @@
             content: '';
             display: block;
             position: absolute;
-            top: -15px;
-            right: 315px;
+            top: -42%;
+            left: -4.4vw;
             width: 326px;
             height: 55px;
             z-index: -1;
@@ -384,6 +384,10 @@
     }
 }
 
+
+
+// MEDIA
+
 @media screen and (max-width: 1200px) {
     .slider {
         &__img-box {
@@ -405,6 +409,15 @@
         &__toggle-btn {
             width: 27px;
             height: 2.67px;
+        }
+    }
+
+    .delivery {
+        &__content {
+            padding-left: 5%;
+        }
+        &__img {
+            width: 100%;
         }
     }
     .company__list-img {
@@ -444,10 +457,10 @@
         &__title {
             font-size: 36px;
             line-height: 44px;
-            margin-top: 0px;
+            margin: 0 0 25px;
         }
         &__item {
-            height: 245px;
+            height: 250px;
         }
     }
     .control {
@@ -461,8 +474,54 @@
             margin-right: 17px;
         }
     }
-    .company__list-img {
-        width: 100%;
+
+    .delivery {
+        padding-top: 45px;
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        &__menu {
+            font-size: 24px;
+            line-height: 30px;
+            margin: 0 0 18px;
+        }
+        &__menu-item {
+            margin: 15px 0;
+            &_active::after {
+                top: -34.3%;
+                left: -2.7vw;
+                width: 80%;
+                height: 155%;
+            }
+        }
+
+        &__content {
+            padding-left: 56px;
+            p {
+                font-size: 14px;
+                line-height: 19px;
+                max-width: 89.5%;
+            }
+        } 
+        &__learn-btn {
+            margin-top: 22px;
+        }
+        &__crop-img {
+            max-width: 258px;
+            width: 100%;
+            height: 512px;
+            img {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+    .company {
+        padding: 61px 0 86px;
+        &__list-img {
+            width: 100%;
+        }
     }
     .category {
         &__item_one {
@@ -499,6 +558,21 @@
     .swiper-container {
         margin-right: auto;
     }
+    .delivery {
+        flex-wrap: wrap;
+        &__content {
+            padding-left: 5%;
+        }
+        &__crop-img {
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            img {
+                width: 50vw;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -516,19 +590,47 @@
             line-height: 19px;
         }
     }
-    .company__list {
+
+    .delivery {
         flex-wrap: wrap;
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &__content {
+            padding-left: 5%;
+        }
+        &__crop-img {
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            img {
+                max-width: none;
+                width: 45vw;
+            }
+        }
     }
-    .category__title {
-        font-size: 24px;
-        line-height: 29px;
+
+
+    .company {
+        &__list {
+            flex-wrap: wrap;
+        }
+    }
+    .category {
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &__item {
+            height: 50vw;
+        }
     }
     .swiper-container {
         margin-right: auto;
     }
-    .category__item {
-        height: 50vw;
-    }
+
 }
 
 @media screen and (min-width: 376px) and (max-width: 575px) {
@@ -549,7 +651,37 @@
 }
 
 @media screen and (max-width: 375px) {
+    .delivery {
+        width: 335px;
+        margin: 0 auto;
+        padding-top: 79px;
+        &__learn-btn {
+            font-size: 14px;
+            line-height: 19px;
+            max-width: 132px;
+            margin-top: 21px;
+            padding: 8px 20px;
+        }
+        &__crop-img {
+            img {
+                width: 100%;
+            }
+        }
+        &__content {
+            padding-left: 0;
+            p{
+                max-width: 100%;
+            }
+        }
+        &__title {
+            margin: 14px 0 33px;
+        }
+        &__menu-item_active::after {
+            left: -5.3vw;
+        }
+    }
     .control {
+        padding-top: 20px;
         align-items: normal;
         &__btn_next,
         &__btn_prev {
@@ -568,6 +700,7 @@
         }
     }
     .company {
+        padding: 79px 0 86px;
         &.container {
             width: 335px;
         }
@@ -637,7 +770,14 @@
     }
 
     .category {
-        
+        padding-top: 53px;
+        &__title {
+            margin: 0 0 21px;
+        }
+        &__item {
+            height: 63.9vw;
+        }
+
         &__item_one {
             background: url(/static/images/category-kids-main-mobile.png) no-repeat center;
             background-color: #DBE4DB;
@@ -699,6 +839,9 @@
     }
     .container {
         width: 90%;
+    }
+    .delivery{
+        width: 100%;
     }
     .company {
         &__list li {

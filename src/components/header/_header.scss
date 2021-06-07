@@ -1,5 +1,5 @@
 .header {
-    padding: 40px 0 60px;
+    padding: 49px 0 60px;
     display: flex;
     align-items: center;
     a {
@@ -144,7 +144,7 @@
 
 @media screen and (max-width: 375px) {
     .header {
-        padding: 4vw 0 25px;
+        padding: 6.4vw 0 25px;
         &__container-mobile {
             width: 315px;
         }

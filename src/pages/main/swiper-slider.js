@@ -11,7 +11,7 @@ if (window.screen.width > 1200) {
 } else if (window.screen.width <= 450 && window.screen.width > 376) {
     sliderSwiper(1.5, 10);
 } else if (window.screen.width <= 376) {
-    sliderSwiper(1.5, 16);
+    sliderSwiper(1.33, 16);
 }
 
 console.log(window.screen.width);
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } else if (window.outerWidth <= 450 && window.outerWidth > 376) {
             sliderSwiper(1.5, 10);
         } else if (window.outerWidth <= 376) {
-            sliderSwiper(1.5, 16);
+            sliderSwiper(1.33, 16);
         }
     };
 });
