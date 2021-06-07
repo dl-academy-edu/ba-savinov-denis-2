@@ -384,8 +384,8 @@
     }
 }
 
-@media screen and (max-width: 1200px) { 
-    .slider{
+@media screen and (max-width: 1200px) {
+    .slider {
         &__img-box {
             align-self: flex-end;
             width: 17vw;
@@ -394,7 +394,6 @@
             margin-top: 0;
             max-width: 43vw;
             float: right;
-
         }
         &__counter {
             font-size: 48px;
@@ -410,7 +409,7 @@
     }
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
     .slider {
         &__control {
             margin-top: 16px;
@@ -435,7 +434,6 @@
             min-height: 48.7vw;
         }
     }
-    
     .category {
         &__item_one {
             background: url(/static/images/category-kids-tablet.png) no-repeat center;
@@ -464,14 +462,13 @@
     }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) { 
+@media screen and (min-width: 576px) and (max-width: 767px) {
     .slider__img {
         max-width: 58vw;
     }
-
 }
 
-@media screen and (max-width: 576px) { 
+@media screen and (max-width: 576px) {
     .slider {
         &__title {
             font-size: 36px;
@@ -488,13 +485,13 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) { 
+@media screen and (min-width: 375px) and (max-width: 575px) {
     .slider__img {
         max-width: 40vw;
     }
 }
 
-@media screen and (max-width: 375px) { 
+@media screen and (max-width: 375px) {
     .slider {
         &__control {
             order: 1;
@@ -560,8 +557,8 @@
     }
 }
 
-@media screen and (max-width: 374px) { 
-    .slider{
+@media screen and (max-width: 374px) {
+    .slider {
         &__text {
             padding: 0;
             padding: 10vw 0 0;
@@ -577,20 +574,17 @@
             max-width: 65vw;
         }
     }
-
     .container {
         width: 90%;
     }
-
 }
-//retina display min-resolution: 2dppx
 
-@media screen and (min-resolution: 2dppx) and (min-width: 769px){
+//retina display min-resolution: 2dppx
+@media screen and (min-resolution: 2dppx) and (min-width: 769px) {
     .category {
         &__item_one {
             background: 280px 270px url(/static/images/category-kids@2x.png) no-repeat center;
             background-color: #DBE4DB;
-
         }
         &__item_two {
             background: 280px 270px url(/static/images/category-holiday@2x.png) no-repeat center;
@@ -615,8 +609,7 @@
     }
 }
 
-
-@media screen and (min-resolution: 2dppx) and (max-width: 768px) { 
+@media screen and (min-resolution: 2dppx) and (max-width: 768px) {
     .category {
         &__item_one {
             background: 258px 249px url(/static/images/category-kids-tablet@2x.png) no-repeat center;
@@ -644,7 +637,8 @@
         }
     }
 }
-@media screen and (min-resolution: 2dppx) and (max-width: 375px) { 
+
+@media screen and (min-resolution: 2dppx) and (max-width: 375px) {
     .category {
         &__item_one {
             background: 247px 238px url(/static/images/category-kids-mobile@2x.png) no-repeat center;
