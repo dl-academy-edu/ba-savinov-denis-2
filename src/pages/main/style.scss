@@ -549,6 +549,24 @@
 }
 
 @media screen and (max-width: 375px) {
+    .control {
+        align-items: normal;
+        &__btn_next,
+        &__btn_prev {
+            width: 33px;
+            height: 33px;
+        }
+        &__btn_prev::after,
+        &__btn_next::after {
+            background-size: 20px 25px;
+            height: 26px;
+            width: 23px;
+        }
+        &__description {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
     .company {
         &.container {
             width: 335px;
@@ -613,35 +631,56 @@
             }
         }
     }
+
+    .swiper-container {
+        width: 335px;
+    }
+
     .category {
+        
         &__item_one {
             background: url(/static/images/category-kids-main-mobile.png) no-repeat center;
             background-color: #DBE4DB;
+            background-size: 50vw;
         }
         &__item_two {
             background: url(/static/images/category-holiday-main-mobile.png) no-repeat center;
             background-color: #EADDD3;
+            background-size: 40vw;
         }
         &__item_three {
             background: url(/static/images/category-toys-main-mobile.png) no-repeat center;
             background-color: #F8F2DA;
+            background-size: 50vw;
         }
         &__item_four {
             background: url(/static/images/category-accessories-main-mobile.png) no-repeat center;
             background-color: #D5D4E1;
+            background-size: 50vw;
         }
         &__item_five {
             background: url(/static/images/category-sale-main-mobile.png) no-repeat center;
             background-color: #F3D0DB;
+            background-size: 50vw;
         }
         &__item_six {
             background: url(/static/images/category-adults-main-mobile.png) no-repeat center;
             background-color: #E5EAF8;
+            background-size: 50vw;
         }
     }
 }
 
 @media screen and (max-width: 374px) {
+    .category {
+        &__item {
+            padding: 0;
+            
+        }
+    }
+    .swiper-container {
+        width: 95%;
+    }
     .slider {
         &__text {
             padding: 0;

@@ -1,3 +1,5 @@
+console.log (window.screen.width);
+
 if (window.screen.width > 1200) {
     sliderSwiper(4, 20);
 } else if (window.screen.width < 1200 && window.screen.width > 770) {
@@ -16,20 +18,24 @@ console.log(window.screen.width);
 
 document.addEventListener("DOMContentLoaded", function(event) {
     window.onresize = function() {
+        console.log ("ресайз =" + window.outerWidth);
         if (window.outerWidth > 1200) {
             sliderSwiper(4, 20);
-        }
-        if (window.outerWidth < 1200) {
+        } else if (window.outerWidth < 1200 && window.outerWidth > 780) {
+            console.log ("ставим 3 20");
             sliderSwiper(3, 20);
-        }
-        if (window.outerWidth <= 770) {
+        } else if (window.outerWidth <= 780 && window.outerWidth > 760) {
+            console.log ("ставим 2,618 19,78");
             sliderSwiper(2.618, 19.78);
-        }
-        if (window.outerWidth <= 766) {
+        } else if (window.outerWidth <= 760 && window.outerWidth > 450) {
+            console.log ("ставим 2 10");
             sliderSwiper(2, 10);
-        }
-        if (window.outerWidth <= 450) {
+        } else if (window.outerWidth <= 450 && window.outerWidth > 376) {
+            console.log ("ставим 1.5 10");
             sliderSwiper(1.5, 10);
+        } else if (window.outerWidth <= 376) {
+            console.log ("ставим 1.5 16");
+            sliderSwiper(1.5, 16);
         }
     };
 });
