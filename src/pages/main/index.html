@@ -109,13 +109,41 @@
                 @@include('btn-a/index.html', { "link": "#", "class":"delivery__learn-btn", "text": "LEARN MORE" })
             </div>
         </section>
-        <section class="company">
+        <section class="company container">
             <h2 class="visually-hidden">Company</h2>
             <ul class="company__list">
-                <li><img src="/static/images/company/mail-group.png" alt="" width="193" height="60"></li>
-                <li><img src="/static/images/company/apple.png" alt="" width="179" height="61"></li>
-                <li><img src="/static/images/company/eltex.png" alt="" width="216" height="46"></li>
-                <li><img src="/static/images/company/owox.png" alt="" width="211" height="40"></li>
+                <li class="company__list-item-1">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/mail-group-mobile.png, /static/images/company/mail-group-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/mail-group-tablet.png, /static/images/company/mail-group-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/mail-group.png, /static/images/company/mail-group@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/mail-group.png" alt="Mail Group logo" />
+                    </picture>
+                </li>
+                <li class="company__list-item-2">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/apple-mobile.png, /static/images/company/apple-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/apple-tablet.png, /static/images/company/apple-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/apple.png, /static/images/company/apple@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/apple.png" alt="Apple logo" />
+                    </picture>
+                </li>
+                <li class="company__list-item-3">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/eltex-mobile.png, /static/images/company/eltex-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/eltex-tablet.png, /static/images/company/eltex-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/eltex.png, /static/images/company/eltex@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/eltex.png" alt="Eltex logo" />
+                    </picture>
+                </li>
+                <li class="company__list-item-4">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/owox-mobile.png, /static/images/company/owox-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/owox-tablet.png, /static/images/company/owox-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/owox.png, /static/images/company/owox@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/owox.png" alt="Owox logo" />
+                    </picture>
+                </li>
             </ul>
         </section>
         <section class="dlk-info">

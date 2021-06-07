@@ -407,6 +407,9 @@
             height: 2.67px;
         }
     }
+    .company__list-img {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -434,29 +437,56 @@
             min-height: 48.7vw;
         }
     }
+    .swiper-container {
+        margin-right: -60px;
+    }
+    .category {
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 0px;
+        }
+        &__item {
+            height: 245px;
+        }
+    }
+    .control {
+        padding-top: 14px;
+        &__description {
+            font-size: 14px;
+            line-height: 19px;
+            max-width: 78%;
+        }
+        &__btn_next {
+            margin-right: 17px;
+        }
+    }
+    .company__list-img {
+        width: 100%;
+    }
     .category {
         &__item_one {
-            background: url(/static/images/category-kids-tablet.png) no-repeat center;
+            background: url(/static/images/category-kids-main-tablet.png) no-repeat center;
             background-color: #DBE4DB;
         }
         &__item_two {
-            background: url(/static/images/category-holiday-tablet.png) no-repeat center;
+            background: url(/static/images/category-holiday-main-tablet.png) no-repeat center;
             background-color: #EADDD3;
         }
         &__item_three {
-            background: url(/static/images/category-toys-tablet.png) no-repeat center;
+            background: url(/static/images/category-toys-main-tablet.png) no-repeat center;
             background-color: #F8F2DA;
         }
         &__item_four {
-            background: url(/static/images/category-accessories-tablet.png) no-repeat center;
+            background: url(/static/images/category-accessories-main-tablet.png) no-repeat center;
             background-color: #D5D4E1;
         }
         &__item_five {
-            background: url(/static/images/category-sale-tablet.png) no-repeat center;
+            background: url(/static/images/category-sale-main-tablet.png) no-repeat center;
             background-color: #F3D0DB;
         }
         &__item_six {
-            background: url(/static/images/category-adults-tablet.png) no-repeat center;
+            background: url(/static/images/category-adults-main-tablet.png) no-repeat center;
             background-color: #E5EAF8;
         }
     }
@@ -465,6 +495,9 @@
 @media screen and (min-width: 576px) and (max-width: 767px) {
     .slider__img {
         max-width: 58vw;
+    }
+    .swiper-container {
+        margin-right: auto;
     }
 }
 
@@ -483,15 +516,66 @@
             line-height: 19px;
         }
     }
+    .company__list {
+        flex-wrap: wrap;
+    }
+    .category__title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .swiper-container {
+        margin-right: auto;
+    }
+    .category__item {
+        height: 50vw;
+    }
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (min-width: 376px) and (max-width: 575px) {
     .slider__img {
         max-width: 40vw;
+    }
+    .company {
+        &__list {
+            justify-content: space-evenly;
+            li {
+                width: 40vw;
+            }
+        }
+        &__list-img {
+            width: 80%;
+        }
     }
 }
 
 @media screen and (max-width: 375px) {
+    .company {
+        &.container {
+            width: 335px;
+        }
+        &__list {
+            li:nth-child(3n+1) {
+                margin-top: 23px;
+            }
+            justify-content: flex-start;
+        }
+        &__list-item-1 {
+            order: 3;
+            margin-left: 14px;
+        }
+        &__list-item-2 {
+            order: 2;
+            margin-left: 46px;
+        }
+        &__list-item-3 {
+            order: 1;
+            margin-left: 6px;
+        }
+        &__list-item-4 {
+            order: 4;
+            margin-left: 39px;
+        }
+    }
     .slider {
         &__control {
             order: 1;
@@ -531,27 +615,27 @@
     }
     .category {
         &__item_one {
-            background: url(/static/images/category-kids-mobile.png) no-repeat center;
+            background: url(/static/images/category-kids-main-mobile.png) no-repeat center;
             background-color: #DBE4DB;
         }
         &__item_two {
-            background: url(/static/images/category-holiday-mobile.png) no-repeat center;
+            background: url(/static/images/category-holiday-main-mobile.png) no-repeat center;
             background-color: #EADDD3;
         }
         &__item_three {
-            background: url(/static/images/category-toys-mobile.png) no-repeat center;
+            background: url(/static/images/category-toys-main-mobile.png) no-repeat center;
             background-color: #F8F2DA;
         }
         &__item_four {
-            background: url(/static/images/category-accessories-mobile.png) no-repeat center;
+            background: url(/static/images/category-accessories-main-mobile.png) no-repeat center;
             background-color: #D5D4E1;
         }
         &__item_five {
-            background: url(/static/images/category-sale-mobile.png) no-repeat center;
+            background: url(/static/images/category-sale-main-mobile.png) no-repeat center;
             background-color: #F3D0DB;
         }
         &__item_six {
-            background: url(/static/images/category-adults-mobile.png) no-repeat center;
+            background: url(/static/images/category-adults-main-mobile.png) no-repeat center;
             background-color: #E5EAF8;
         }
     }
@@ -576,6 +660,17 @@
     }
     .container {
         width: 90%;
+    }
+    .company {
+        &__list li {
+            margin-bottom: 5%;
+        }
+        &__list-img {
+            width: 50vw;
+        }
+        &.container {
+            width: 90%;
+        }
     }
 }
 
@@ -612,27 +707,27 @@
 @media screen and (min-resolution: 2dppx) and (max-width: 768px) {
     .category {
         &__item_one {
-            background: 258px 249px url(/static/images/category-kids-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-kids-main-tablet@2x.png) no-repeat center;
             background-color: #DBE4DB;
         }
         &__item_two {
-            background: 258px 249px url(/static/images/category-holiday-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-holiday-main-tablet@2x.png) no-repeat center;
             background-color: #EADDD3;
         }
         &__item_three {
-            background: 258px 249px url(/static/images/category-toys-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-toys-main-tablet@2x.png) no-repeat center;
             background-color: #F8F2DA;
         }
         &__item_four {
-            background: 258px 249px url(/static/images/category-accessories-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-accessories-main-tablet@2x.png) no-repeat center;
             background-color: #D5D4E1;
         }
         &__item_five {
-            background: 258px 249px url(/static/images/category-sale-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-sale-main-tablet@2x.png) no-repeat center;
             background-color: #F3D0DB;
         }
         &__item_six {
-            background: 258px 249px url(/static/images/category-adults-tablet@2x.png) no-repeat center;
+            background: 258px 249px url(/static/images/category-adults-main-tablet@2x.png) no-repeat center;
             background-color: #E5EAF8;
         }
     }
@@ -641,27 +736,27 @@
 @media screen and (min-resolution: 2dppx) and (max-width: 375px) {
     .category {
         &__item_one {
-            background: 247px 238px url(/static/images/category-kids-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-kids-main-mobile@2x.png) no-repeat center;
             background-color: #DBE4DB;
         }
         &__item_two {
-            background: 247px 238px url(/static/images/category-holiday-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-holiday-main-mobile@2x.png) no-repeat center;
             background-color: #EADDD3;
         }
         &__item_three {
-            background: 247px 238px url(/static/images/category-toys-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-toys-main-mobile@2x.png) no-repeat center;
             background-color: #F8F2DA;
         }
         &__item_four {
-            background: 247px 238px url(/static/images/category-accessories-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-accessories-main-mobile@2x.png) no-repeat center;
             background-color: #D5D4E1;
         }
         &__item_five {
-            background: 247px 238px url(/static/images/category-sale-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-sale-main-mobile@2x.png) no-repeat center;
             background-color: #F3D0DB;
         }
         &__item_six {
-            background: 247px 238px url(/static/images/category-adults-mobile@2x.png) no-repeat center;
+            background: 247px 238px url(/static/images/category-adults-main-mobile@2x.png) no-repeat center;
             background-color: #E5EAF8;
         }
     }
