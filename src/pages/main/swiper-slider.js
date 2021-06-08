@@ -1,18 +1,3 @@
-// if (window.screen.width > 1200) {
-//     sliderSwiper(4, 20);
-// } else if (window.screen.width < 1200 && window.screen.width > 770) {
-//     sliderSwiper(3, 10);
-// } else if (window.screen.width <= 770 && window.screen.width > 766) {
-//     sliderSwiper(2.618, 19.78);
-// } else if (window.screen.width <= 766 && window.screen.width > 450) {
-//     sliderSwiper(2, 10);
-// } else if (window.screen.width <= 450 && window.screen.width > 376) {
-//     sliderSwiper(1.5, 10);
-// } else if (window.screen.width <= 376) {
-//     sliderSwiper(1.33, 16);
-// }
-
-
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -68,24 +53,5 @@ const swiper = new Swiper('.swiper-container', {
             spaceBetween: 20,
             loop: true
         }
-        // 540: {
-        //     watchOverflow: false,
-        //     slidesPerView: 1.33,
-        //     spaceBetween: 16,
-        //     loop: false
-        // },
-        // 460: {
-        //     watchOverflow: false,
-        //     slidesPerView: 1.4,
-        //     spaceBetween: 16,
-        //     loop: false
-        // },
-        // 320: {
-        //     watchOverflow: false,
-        //     slidesPerView: 1,
-        //     spaceBetween: 0,
-        //     loop: false
-        // },
-
     }
 });
