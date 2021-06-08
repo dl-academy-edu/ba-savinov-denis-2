@@ -167,3 +167,11 @@
         height: 22px;
     }
 }
+
+@media screen and (min-width: 280px) and (max-width: 374px) {
+    .header {
+        &__container-mobile {
+            width: 98%;
+        }
+    }
+}
