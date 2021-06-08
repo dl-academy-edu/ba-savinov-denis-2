@@ -384,10 +384,7 @@
     }
 }
 
-
-
 // MEDIA
-
 @media screen and (max-width: 1200px) {
     .slider {
         &__img-box {
@@ -411,7 +408,6 @@
             height: 2.67px;
         }
     }
-
     .delivery {
         &__content {
             padding-left: 5%;
@@ -474,7 +470,6 @@
             margin-right: 17px;
         }
     }
-
     .delivery {
         padding-top: 45px;
         &__title {
@@ -495,7 +490,6 @@
                 height: 155%;
             }
         }
-
         &__content {
             padding-left: 56px;
             p {
@@ -503,7 +497,7 @@
                 line-height: 19px;
                 max-width: 89.5%;
             }
-        } 
+        }
         &__learn-btn {
             margin-top: 22px;
         }
@@ -590,7 +584,6 @@
             line-height: 19px;
         }
     }
-
     .delivery {
         flex-wrap: wrap;
         &__title {
@@ -611,8 +604,6 @@
             }
         }
     }
-
-
     .company {
         &__list {
             flex-wrap: wrap;
@@ -626,11 +617,13 @@
         &__item {
             height: 50vw;
         }
+        &__item_two {
+            background-size: 40vw;
+        }
     }
     .swiper-container {
         margin-right: auto;
     }
-
 }
 
 @media screen and (min-width: 376px) and (max-width: 575px) {
@@ -669,7 +662,7 @@
         }
         &__content {
             padding-left: 0;
-            p{
+            p {
                 max-width: 100%;
             }
         }
@@ -764,11 +757,11 @@
             }
         }
     }
-
-    .swiper-container {
-        width: 335px;
+    .category.swiper-container {
+        overflow: auto;
+        margin-right: 0;
+        margin-left: 20px;
     }
-
     .category {
         padding-top: 53px;
         &__title {
@@ -777,16 +770,15 @@
         &__item {
             height: 63.9vw;
         }
-
         &__item_one {
             background: url(/static/images/category-kids-main-mobile.png) no-repeat center;
             background-color: #DBE4DB;
-            background-size: 50vw;
+            background-size: 58vw;
         }
         &__item_two {
             background: url(/static/images/category-holiday-main-mobile.png) no-repeat center;
             background-color: #EADDD3;
-            background-size: 40vw;
+            background-size: 49vw;
         }
         &__item_three {
             background: url(/static/images/category-toys-main-mobile.png) no-repeat center;
@@ -815,12 +807,11 @@
     .category {
         &__item {
             padding: 0;
-            
         }
     }
-    .swiper-container {
-        width: 95%;
-    }
+    // .swiper-container {
+    //     width: 95%;
+    // }
     .slider {
         &__text {
             padding: 0;
@@ -840,7 +831,7 @@
     .container {
         width: 90%;
     }
-    .delivery{
+    .delivery {
         width: 100%;
     }
     .company {
