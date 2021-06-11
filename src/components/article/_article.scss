@@ -2,26 +2,33 @@
     max-width: 380px;
     width: 100%;
     margin-bottom: 16px;
+
     &:not(:nth-child(3n+1)) {
         margin-right: 20px;
     }
+
     &__post-time {
+        font-family: var(--font-roboto);
+        line-height: 19px;
         display: block;
         margin-top: 15px;
         color: #818181;
     }
+
     &__title {
         font-family: var(--font-montserrat);
         font-weight: bold;
         font-size: 24px;
         line-height: 31px;
-        margin: 6px 0 0;
+        margin: 10px 0 0;
         transition: .4s;
-            &:active,
-            &:hover {
-                text-decoration-line: underline;
-            }
+
+        &:active,
+        &:hover {
+            text-decoration-line: underline;
+        }
     }
+
     &__text {
         font-size: 18px;
         line-height: 25px;
