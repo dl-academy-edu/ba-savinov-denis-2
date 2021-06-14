@@ -619,6 +619,9 @@
 }
 
 @media screen and (max-width: 576px) {
+    .container {
+        width: 96%;
+    }
     .slider {
         &__title {
             font-size: 36px;
