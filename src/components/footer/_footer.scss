@@ -146,9 +146,6 @@ $primary-text-color: #fff;
     &:hover &__text {
         color: #C29974;
     }
-    // &__star-path {
-    //     fill: #C29974;
-    // }
     &__label {
         color: $primary-text-color;
         padding-left: 5px;
@@ -188,9 +185,15 @@ $primary-text-color: #fff;
 }
 
 @media screen and (max-width: 1200px) {
-    // @media screen and (min-width: 768px) and (max-width: 1200px) {
-    .footer__lists {
-        padding-bottom: 26px;
+    .footer {
+        &__lists {
+            padding-bottom: 26px;
+        }
+        &__content_bottom {
+            flex-wrap: wrap;
+            padding: 24px 0 0;
+            justify-content: normal;
+        }
     }
     .copyright {
         width: auto;
@@ -198,11 +201,6 @@ $primary-text-color: #fff;
         &__link {
             width: auto;
         }
-    }
-    .footer__content_bottom {
-        flex-wrap: wrap;
-        padding: 24px 0 0;
-        justify-content: normal;
     }
     .star-rating {
         margin-bottom: 14px;
@@ -244,18 +242,17 @@ $primary-text-color: #fff;
         &__navigation {
             margin-right: 0;
         }
-    }
-    .footer__content_top {
-        flex-wrap: wrap;
-        justify-content: center;
+        &__content_top {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 }
 
 @media screen and (max-width: 575px) {
     .footer {
         .container {
-            max-width: 89%;
-            width: 100%;
+            width: 89%;
         }
     }
 }

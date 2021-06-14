@@ -4,9 +4,10 @@
     background: rgba(125, 151, 218, 0.2);
     padding: 41px 0 24px;
 
-    .container {
+    &__wrapper {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     h3 {
@@ -124,6 +125,7 @@
 }
 .color {
     &__list {
+        width: 76px;
         li {
             margin-top: 15px;
         }
@@ -183,6 +185,7 @@
 }
 
 .delivery {
+    width: 132px;
     &__list {
         margin-left: 31px;
         li {
@@ -284,3 +287,228 @@
         list-style-type: none;
     }
 }
+
+
+//MEDIA 
+
+@media screen and (max-width: 1200px) {
+    .filters {
+        &__wrapper {
+            justify-content: space-between;
+        } 
+        
+    }
+    .toys {
+        &__item:not(:nth-child(3n)) {
+            margin-right: 0;
+        }
+        &__item {
+            max-width: 50%;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .page-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-top: 35px;
+    }
+    .breadcrumbs {
+        padding: 12px 0 29px;
+    }
+    .filters {
+        padding: 29px 0 14px;
+        &__wrapper {
+            justify-content: flex-start;
+        } 
+    }
+    .cost__values {
+        width: 98%;
+    }
+    .color-wrapper {
+        margin-left: 71px;
+    }
+    .delivery {
+        margin-left: 90px;
+    }
+    .amount-wrapper {
+        margin-left: 0;
+        margin-top: 3px;
+    }
+    .filters__apply-btn {
+        margin: 37px 0 0 209px;
+    }
+    .toys {
+        padding-bottom: 0;
+        &__list {
+            margin-top: 40px;
+        }
+        &__item {
+            max-width: 203px;
+            height: 37.5vw;
+            margin-top: 10px;
+        }
+        &__title {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 11px 0 0;
+        }
+        &__price {
+            font-size: 14px;
+            line-height: 19px;
+            margin-top: 4px;
+        }
+    }
+    .pagination {
+        padding-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .delivery {
+        margin-left: 30px;
+    }
+    .amount-wrapper {
+        margin-left: 30px;
+    }
+    .cost {
+        margin-bottom: 15px;
+    } 
+    .toys {
+        &__item {
+            height: auto;
+        }
+        &__popup {
+            max-width: 157px;
+            max-height: 157px;
+            font-size: 16px;
+            line-height: 0px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .page-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 20px;
+    }
+    .breadcrumbs {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 0 19px;
+        &__list li {
+            margin-right: 11px;
+        }
+
+        &__link::after {
+            background-size: 11px 11px;
+            margin-left: 15px;
+            height: 10px;
+            width: 9px;
+        }
+    }
+    .filters {
+        padding: 24px 0 14px;
+        font-size: 14px;
+        line-height: 19px;
+        ul {
+            margin: 0;
+        }
+        &__wrapper h3 {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &__apply-btn {
+            margin: 23px auto 11px;
+        }
+    }
+    .cost {
+        max-width: 265px;
+        margin-bottom: 25px;
+        &__values {
+            width: 76%;
+            margin-top: 5px;
+        }
+    }  
+    .color {
+        label {
+            margin-left: 24px;
+            &::before {
+                left: -24px;
+                width: 17px;
+                height: 17px;
+           }
+           &:after {
+                left: -22px;
+           }
+        }
+        &__list li {
+            margin-top: 11px;
+        }
+        &-wrapper {
+            margin-left: 0;
+        }
+    }
+    .delivery {
+        margin-left: 100px;
+        & &__list {
+            margin-left: 22px;
+            margin-top: 13px;
+            li {
+                margin-top: 13px;
+            }
+        }
+        label {
+            &::before {
+                left: -24px;
+                top: -1px;
+                width: 17px;
+                height: 17px;
+            }
+            &::after {
+                left: -20px;
+                top: 3px;
+                width: 9px;
+                height: 9px;
+            }
+        }
+    }
+    .amount {
+        h3 {
+            margin-bottom: 10px;
+        }
+        &-wrapper {
+            margin-top: 26px;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    .toys {
+        &__price {
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 4px;
+        }
+        &__item {
+            max-width: 160px;
+            height: 247px;
+        }
+        &__list {
+            margin-top: 30px;
+        }
+    }
+    .pagination {
+        padding-bottom: 41px;
+        &__list {
+            margin: 4px 0 5px;
+        }
+    }
+ 
+}
+

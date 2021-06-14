@@ -112,9 +112,6 @@
         &__mobile-btn_open {
             display: block;
         }
-       &__container-mobile {
-            width: 86.1%;
-        }
     }
     .logo {
         width: 62px;
@@ -145,7 +142,7 @@
 @media screen and (max-width: 375px) {
     .header {
         padding: 6.4vw 0 25px;
-        &__container-mobile {
+        &.container {
             width: 315px;
         }
     }
@@ -170,8 +167,8 @@
 
 @media screen and (min-width: 280px) and (max-width: 374px) {
     .header {
-        &__container-mobile {
-            width: 98%;
+        &.container {
+            width: 90%;
         }
     }
 }

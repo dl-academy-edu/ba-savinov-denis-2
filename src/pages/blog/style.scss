@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 1200px) {
     .container {
-        max-width: 98%;
+        width: 98%;
     }
 
     .articles {
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 648px;
+        width: 648px;
     }
 
     .page-title {
@@ -87,9 +87,8 @@
 
 @media screen and (max-width: 767px) {
     .container {
-        max-width: 95%;
+        width: 90%;
     }
-
     .articles {
         .article {
             margin-right: 1%;
@@ -99,9 +98,6 @@
 }
 
 @media screen and (max-width: 674px) {
-    .container {
-        max-width: 95%;
-    }
 
     .articles {
         justify-content: center;
@@ -115,7 +111,7 @@
 
 @media screen and (max-width: 375px) {
     .container {
-        max-width: 89.5%;
+        width: 89.5%;
     }
 
     .page-title {
@@ -201,7 +197,7 @@
 
 @media screen and (min-width: 280px) and (max-width: 374px) {
     .container {
-        max-width: none;
+        width: 90%;
     }
 
     .article {
@@ -213,4 +209,5 @@
             width: 100%;
         }
     }
+
 }

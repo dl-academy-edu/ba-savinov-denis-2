@@ -589,7 +589,7 @@
         }
     }
     .contacts__map {
-        width: 75vw;
+        width: 90%;
         height: 38vw;
     }
 }
@@ -693,6 +693,9 @@
 }
 
 @media screen and (max-width: 375px) {
+    main.container {
+        width: 375px;
+    }
     .delivery {
         width: 335px;
         margin: 0 auto;
@@ -810,8 +813,9 @@
         padding-bottom: 51px;
     }
     .contacts {
+        margin-top: 33px;
         &__titles {
-            margin: 35px 0 -16px 19px;
+            margin: 4px 0 -14px 19px;
         }
         p {
             margin: 4px 0 0;
@@ -839,12 +843,14 @@
             max-width: 109px;
         }
         &__titles {
-            margin: -1px 0px -21px 19px;
+            margin: 0px 0 -14px 19px;
         }
     }
-    .about-us__wrapper,
-    .contacts__wrapper {
-        padding: 23px 38px 23px 19px;
+    .about-us__wrapper {
+        padding: 14px 38px 23px 19px;
+    }
+    .contacts__wrapper{
+        padding: 20px 38px 23px 19px;
     }
     .contacts p,
     .about-us p {
@@ -898,6 +904,9 @@
 }
 
 @media screen and (max-width: 374px) {
+    main.container {
+        width: 90%;
+    }
     .category {
         &__item {
             padding: 0;

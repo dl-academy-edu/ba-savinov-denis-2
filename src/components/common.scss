@@ -36,8 +36,7 @@ h2 {
 }
 
 .container {
-    max-width: 1180px;
-    width: 100%;
+    width: 1180px;
     margin: 0 auto;
 }
 
@@ -103,20 +102,20 @@ h2 {
 
 @media screen and (max-width: 1200px) {
     .container {
-        max-width: 90%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 648px;
+        width: 648px;
     }
 }
-
-@media screen and (max-width: 576px) {}
-
-@media screen and (max-width: 375px) {}
-
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
