@@ -1,0 +1,89 @@
+$numberColumns: 12;
+$gap: 20px;
+
+$size-xl: 1220px;
+$size-lg: 1000px;
+$size-md: 768px;
+$size-sm: 576px;
+
+@mixin media-interval($min, $max) {
+  @if $max == 0 {
+    $max: 9999px;
+  }
+  
+  @media (min-width: ($min + 1px)) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin create-grid($type-width, $media-size) {
+  @if media-size == "full" {
+    .container-grid {
+      max-width: 100%;
+    }
+  } @else {
+    .container-grid {
+      max-width: $media-size - $gap*2;
+    }
+  }
+  @for $i from 1 through $numberColumns {
+    .col-#{$type-width}-#{$i} {
+      width: (100% / $numberColumns) * $i;
+    }
+  
+    .skip-#{$type-width}-#{$i} {
+      margin-left: (100% / $numberColumns) * $i;
+    }
+    .add-#{$type-width}-#{$i} {
+      margin-right: (100% / $numberColumns) * $i;
+    }
+  }
+}
+
+@include media-interval($size-xl, 0) {
+  @include create-grid(xl, $size-xl);
+}
+@include media-interval($size-lg, $size-xl) {
+  @include create-grid(lg, $size-lg);
+}
+@include media-interval($size-md, $size-lg) {
+  @include create-grid(md, $size-md);
+}
+@include media-interval($size-sm, $size-md) {
+  @include create-grid(sm, $size-sm);
+}
+@include media-interval(0, $size-sm) {
+  @include create-grid(xs, "full");
+}
+
+.container-grid {
+  padding-left: $gap;
+  padding-right: $gap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+*[class*="col"] {
+  box-sizing: border-box;
+  padding: $gap $gap/2 0 $gap/2;
+}
+
+
+.row {
+  .content {
+    padding: 15px;
+    box-sizing: border-box;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

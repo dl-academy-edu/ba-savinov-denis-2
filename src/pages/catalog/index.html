@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/7ae5092e20.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script defer src="https://kit.fontawesome.com/7ae5092e20.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mygrids.css">
     <link rel="shortcut icon" href="../../static/images/favicon.ico">
     <title>Catalog</title>
 
@@ -17,7 +18,7 @@
 
 <body>
     @@include('header/index.html')
-    <main class="container">
+    <main class="container-grid">
         <h1 class="page-title">Category Products</h1>
         <section class="breadcrumbs">
             <h2 class="visually-hidden">Breadcrumbs</h2>
@@ -26,42 +27,48 @@
                 <li class="breadcrumbs__item_active">Catalog</li>
             </ul>
         </section>
-        <section class="category category__wrapper">
+        <section class="category">
             <h2 class="visually-hidden">Category Products</h2>
-            <ul class="category__list">
-                <li class="category__item_left">
-                    <a class="category__link category__one" href="#">
-                        <h3>APPAREL KIDS</h3>
+            <ul class="category__list row wrap">
+                <li class="category__item col-xl-3">
+                    <a class="content category__link category__one" href="#">
+                        <img src="../../static/images/category-kids.png" alt="" class="category__image"/>
+                        <h3 class="category__title">APPAREL KIDS</h3>
                     </a>
                 </li>
-                <li class="category__item_left">
-                    <a class="category__link category__two" href="#">
-                        <h3>HOLIDAY SHOP</h3>
+                <li class="category__item col-xl-3">
+                    <a class="content category__link category__two" href="#">
+                        <img src="../../static/images/category-holiday.png" alt="" class="category__image"/>
+                        <h3 class="category__title">HOLIDAY SHOP</h3>
                     </a>
                 </li>
-                <li class="category__item_left">
-                    <a class="category__link category__three " href="../toys/">
-                        <h3>TOYS</h3>
+                <li class="category__item col-xl-3 add-xl-3">
+                    <a class="content category__link category__three" href="../toys/">
+                        <img src="../../static/images/category-toys.png" alt="" class="category__image"/>
+                        <h3 class="category__title">TOYS</h3>
                     </a>
                 </li>
-                <li class="category__item_right">
-                    <a class="category__link category__four " href="# ">
-                        <h3>ACCESSORIES</h3>
+                <li class="category__item skip-xl-2 col-xl-3">
+                    <a class="content category__link category__four" href="#">
+                        <img src="../../static/images/category-accessories.png" alt="" class="category__image"/>
+                        <h3 class="category__title">ACCESSORIES</h3>
                     </a>
                 </li>
-                <li class="category__item_right">
-                    <a class="category__link category__five " href="# ">
-                        <h3>SALE</h3>
+                <li class="category__item col-xl-3">
+                    <a class="content category__link category__five" href="#">
+                        <img src="../../static/images/category-sale.png" alt="" class="category__image"/>
+                        <h3 class="category__title">SALE</h3>
                     </a>
                 </li>
-                <li class="category__item_right">
-                    <a class="category__link category__six " href="# ">
-                        <h3>APPAREL ADULTS</h3>
+                <li class="category__item col-xl-3">
+                    <a class="content category__link category__six" href="#">
+                        <img src="../../static/images/category-adults.png" alt="" class="category__image"/>
+                        <h3 class="category__title">APPAREL ADULTS</h3>
                     </a>
                 </li>
             </ul>
         </section>
-        <section class="description">
+        <section class="description skip-xl-2 col-xl-7">
             <h2 class="description__title">Product Description</h2>
             <p>Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
             <p>A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
