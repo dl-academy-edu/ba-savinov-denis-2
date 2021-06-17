@@ -57,24 +57,78 @@
         <section class="category swiper-container">
             <h2 class="category__title">Category Products</h2>
             <div class="category__wrapper swiper-wrapper">
-                <a class="category__item category__item_one swiper-slide" href="#">
-                    <h3>APPAREL KIDS</h3>
-                </a>
-                <a class="category__item category__item_two swiper-slide" href="#">
-                    <h3>HOLIDAY SHOP</h3>
-                </a>
-                <a class="category__item category__item_three swiper-slide" href="pages/toys/">
-                    <h3>TOYS</h3>
-                </a>
-                <a class="category__item category__item_four swiper-slide" href="#">
-                    <h3>ACCESSORIES</h3>
-                </a>
-                <a class="category__item category__item_five swiper-slide" href="#">
-                    <h3>SALE</h3>
-                </a>
-                <a class="category__item category__item_six swiper-slide" href="#">
-                    <h3>APPAREL ADULTS</h3>
-                </a>
+                @@include('slide/index.html', {
+                    "class-link": "category__item_one",
+                    "alt-img": "Category Apparel Kids",
+                    "link": "#",
+                    "url-img": "../../static/images/category-kids.png",
+                    "url-img2x": "../../static/images/category-kids@2x.png",
+                    "url-tablet": "../../static/images/category-kids-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-kids-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-kids-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-kids-main-mobile@2x.png",
+                    "title":"APPAREL KIDS"
+                })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_two",
+                    "alt-img": "Category Holiday Shop",
+                    "link": "#",
+                    "url-img": "../../static/images/category-holiday.png",
+                    "url-img2x": "../../static/images/category-holiday@2x.png",
+                    "url-tablet": "../../static/images/category-holiday-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-holiday-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-holiday-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-holiday-main-mobile@2x.png",
+                    "title":"HOLIDAY SHOP"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_three",
+                    "alt-img": "Category Toys",
+                    "link": "pages/toys/",
+                    "url-img": "../../static/images/category-toys.png",
+                    "url-img2x": "../../static/images/category-toys@2x.png",
+                    "url-tablet": "../../static/images/category-toys-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-toys-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-toys-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-toys-main-mobile@2x.png",
+                    "title":"TOYS"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_four",
+                    "alt-img": "Category Accessories",
+                    "link": "#",
+                    "url-img": "../../static/images/category-accessories.png",
+                    "url-img2x": "../../static/images/category-accessories@2x.png",
+                    "url-tablet": "../../static/images/category-accessories-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-accessories-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-accessories-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-accessories-main-mobile@2x.png",
+                    "title":"ACCESSORIES"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_five",
+                    "alt-img": "Category Sale",
+                    "link": "#",
+                    "url-img": "../../static/images/category-sale.png",
+                    "url-img2x": "../../static/images/category-sale@2x.png",
+                    "url-tablet": "../../static/images/category-sale-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-sale-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-sale-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-sale-main-mobile@2x.png",
+                    "title":"SALE"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_six",
+                    "alt-img": "Category Apparel Adults",
+                    "link": "#",
+                    "url-img": "../../static/images/category-adults.png",
+                    "url-img2x": "../../static/images/category-adults@2x.png",
+                    "url-tablet": "../../static/images/category-adults-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-adults-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-adults-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-adults-main-mobile@2x.png",
+                    "title":"APPAREL ADULTS"
+                    })
             </div>
             <div class="control">
                 <button class="control__btn_prev" aria-label="button previous category" type="button"></button>
