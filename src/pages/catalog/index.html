@@ -9,11 +9,10 @@
     <link href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../common.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mygrids.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../../static/images/favicon.ico">
     <title>Catalog</title>
-
 </head>
 
 <body>
@@ -30,42 +29,84 @@
         <section class="category">
             <h2 class="visually-hidden">Category Products</h2>
             <ul class="category__list row wrap">
-                <li class="category__item col-xl-3">
-                    <a class="content category__link category__one" href="#">
-                        <img src="../../static/images/category-kids.png" alt="" class="category__image"/>
-                        <h3 class="category__title">APPAREL KIDS</h3>
-                    </a>
-                </li>
-                <li class="category__item col-xl-3">
-                    <a class="content category__link category__two" href="#">
-                        <img src="../../static/images/category-holiday.png" alt="" class="category__image"/>
-                        <h3 class="category__title">HOLIDAY SHOP</h3>
-                    </a>
-                </li>
-                <li class="category__item col-xl-3 add-xl-3">
-                    <a class="content category__link category__three" href="../toys/">
-                        <img src="../../static/images/category-toys.png" alt="" class="category__image"/>
-                        <h3 class="category__title">TOYS</h3>
-                    </a>
-                </li>
-                <li class="category__item skip-xl-2 col-xl-3">
-                    <a class="content category__link category__four" href="#">
-                        <img src="../../static/images/category-accessories.png" alt="" class="category__image"/>
-                        <h3 class="category__title">ACCESSORIES</h3>
-                    </a>
-                </li>
-                <li class="category__item col-xl-3">
-                    <a class="content category__link category__five" href="#">
-                        <img src="../../static/images/category-sale.png" alt="" class="category__image"/>
-                        <h3 class="category__title">SALE</h3>
-                    </a>
-                </li>
-                <li class="category__item col-xl-3">
-                    <a class="content category__link category__six" href="#">
-                        <img src="../../static/images/category-adults.png" alt="" class="category__image"/>
-                        <h3 class="category__title">APPAREL ADULTS</h3>
-                    </a>
-                </li>
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-3",
+                    "class-link": "content category__one",
+                    "alt-img": "Category Apparel Kids",
+                    "link": "#",
+                    "url-img": "../../static/images/category-kids.png",
+                    "url-img2x": "../../static/images/category-kids@2x.png",
+                    "url-tablet": "../../static/images/category-kids-tablet.png",
+                    "url-tablet2x": "../../static/images/category-kids-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-kids-mobile.png",
+                    "url-mobile2x": "../../static/images/category-kids-mobile@2x.png",
+                    "title":"APPAREL KIDS"
+                    })
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-3",
+                    "class-link": "content category__two",
+                    "alt-img": "Category Holiday Shop",
+                    "link": "#",
+                    "url-img": "../../static/images/category-holiday.png",
+                    "url-img2x": "../../static/images/category-holiday@2x.png",
+                    "url-tablet": "../../static/images/category-holiday-tablet.png",
+                    "url-tablet2x": "../../static/images/category-holiday-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-holiday-mobile.png",
+                    "url-mobile2x": "../../static/images/category-holiday-mobile@2x.png",
+                    "title":"HOLIDAY SHOP"
+                    })
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-3 add-xl-3",
+                    "class-link": "content category__three",
+                    "alt-img": "Category Toys",
+                    "link": "../toys/",
+                    "url-img": "../../static/images/category-toys.png",
+                    "url-img2x": "../../static/images/category-toys@2x.png",
+                    "url-tablet": "../../static/images/category-toys-tablet.png",
+                    "url-tablet2x": "../../static/images/category-toys-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-toys-mobile.png",
+                    "url-mobile2x": "../../static/images/category-toys-mobile@2x.png",
+                    "title":"TOYS"
+                    })
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 skip-xl-2 col-xl-3",
+                    "class-link": "content category__four",
+                    "alt-img": "Category Accessories",
+                    "link": "#",
+                    "url-img": "../../static/images/category-accessories.png",
+                    "url-img2x": "../../static/images/category-accessories@2x.png",
+                    "url-tablet": "../../static/images/category-accessories-tablet.png",
+                    "url-tablet2x": "../../static/images/category-accessories-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-accessories-mobile.png",
+                    "url-mobile2x": "../../static/images/category-accessories-mobile@2x.png",
+                    "title":"ACCESSORIES"
+                    })
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-3",
+                    "class-link": "content category__five",
+                    "alt-img": "Category Sale",
+                    "link": "#",
+                    "url-img": "../../static/images/category-sale.png",
+                    "url-img2x": "../../static/images/category-sale@2x.png",
+                    "url-tablet": "../../static/images/category-sale-tablet.png",
+                    "url-tablet2x": "../../static/images/category-sale-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-sale-mobile.png",
+                    "url-mobile2x": "../../static/images/category-sale-mobile@2x.png",
+                    "title":"SALE"
+                    })
+                @@include('category/index.html', {
+                    "class-main": "col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-3",
+                    "class-link": "content category__six",
+                    "alt-img": "Category Apparel Adults",
+                    "link": "#",
+                    "url-img": "../../static/images/category-adults.png",
+                    "url-img2x": "../../static/images/category-adults@2x.png",
+                    "url-tablet": "../../static/images/category-adults-tablet.png",
+                    "url-tablet2x": "../../static/images/category-adults-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-adults-mobile.png",
+                    "url-mobile2x": "../../static/images/category-adults-mobile@2x.png",
+                    "title":"APPAREL ADULTS"
+                    })
             </ul>
         </section>
         <section class="description skip-xl-2 col-xl-7">

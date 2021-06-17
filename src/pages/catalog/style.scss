@@ -1,20 +1,13 @@
-// @mixin category-item {
-//     margin-right: 20px;
-//     margin-bottom: 23px;
-// }
-
-// @mixin category-item-h3 {
-//     margin: auto;
-//     font-family: var(--font-montserrat);
-//     font-style: normal;
-//     font-weight: bold;
-//     font-size: 26px;
-//     line-height: 32px;
-//     text-align: center;
-//     text-transform: uppercase;
-//     color: #FFFFFF;
-//     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-// }
+.row {
+    .content {
+        padding: 15px;
+        box-sizing: border-box;
+        height: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 main.container-grid {
     margin-bottom: 58px;
@@ -31,61 +24,15 @@ main.container-grid {
 /* category */
 
 .category {
-        &__list {
-            list-style-type: none;
-            margin: 0;
-            padding-left: 0;
-        }
-        &__item {
-            position: relative;
-        }
-        h3 {
-            position: absolute;
-            font-family: var(--font-montserrat);
-            top: 53%;
-            left: 50%;
-            margin: 0;
-            transform: translate(-50%, -50%);
-            font-style: normal;
-            font-weight: bold;
-            font-size: 26px;
-            line-height: 32px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-            transition: .4s;
-
-            &:active,
-            &:hover {
-                text-decoration-line: underline;
-            }
-        }
-            &__one {
-                background-color: #DBE4DB;
-            }
-            &__two {
-                background-color:rgba(186, 142, 107, 0.3);
-            }
-            &__three {
-                background-color: #F8F2DA;
-            }
-            &__four {
-                background-color: rgba(9, 3, 79, 0.17);;
-            }
-            &__five {
-                background-color: rgba(207, 68, 111, 0.25);;
-            }
-            &__six {
-                background-color: rgba(125, 151, 218, 0.2);;
-            }
-        &__link {
-            text-align: center;
-        }
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+    }
 }
 
 section.description {
     padding-left: 0;
-    
+
     p {
         margin-left: 3px;
     }
@@ -97,241 +44,144 @@ section.description {
     }
 }
 
-// .category {
-//     &__wrapper {
-//         max-width: 1080px;
-//         width: 100%;
-//     }
-//     &__list {
-//         list-style-type: none;
-//         display: flex;
-//         flex-wrap: wrap;
-//         padding: 0;
-//         margin: 0;
-//     }
-//     &__link {
-//         display: flex;
-//         width: 280px;
-//         height: 270px;
-//         padding: 0 44px;
-//         box-sizing: border-box;
-//         overflow: hidden;
-//     }
-//     &__item_left {
-//         @include category-item;
-//         h3 {
-//             @include category-item-h3;
-//             transition: .4s;
-//             &:active,
-//             &:hover {
-//                 @include text-decoration-category;
-//             }
-//         }
-//     }
-//     &__item_right {
-//         &:not(:nth-child(3n)) {
-//             @include category-item;
-//         }
-//         h3 {
-//             @include category-item-h3;
-//             transition: .4s;
-//             &:active,
-//             &:hover {
-//                 @include text-decoration-category;
-//             }
-//         }
-//     }
-//     &__item_left+&__item_right {
-//         margin-left: auto;
-//     }
-//     &__one {
-//         background: url(../../static/images/category-kids.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #DBE4DB;
-//     }
-//     &__two {
-//         background: url(../../static/images/category-holiday.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #EADDD3;
-//     }
-//     &__three {
-//         background: url(../../static/images/category-toys.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #F8F2DA;
-//     }
-//     &__four {
-//         background: url(../../static/images/category-accessories.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #D5D4E1;
-//     }
-//     &__five {
-//         background: url(../../static/images/category-sale.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #F3D0DB;
-//     }
-//     &__six {
-//         background: url(../../static/images/category-adults.png) no-repeat center;
-//         background-blend-mode: multiply;
-//         background-color: #E5EAF8;
-//     }
-// }
+//MEIDA
 
+@media (min-width: 769px) and (max-width: 1000px) {
+    .row .content {
+        height: 95%;
+    }
 
-// /* description */
+    .category {
 
-// .description {
-//     max-width: 680px;
-//     width: 100%;
-//     margin-left: 200px;
-//     padding: 32px 0 39px;
-//     &__title {
-//         margin: 0 0 24px;
-//     }
-// }
+        &__image {
+            width: 90%;
+        }
+    }
+}
 
+@media (min-width: 577px) and (max-width: 768px) {
+    main.container-grid {
+        margin-bottom: 48px;
+    }
 
-// @media screen and (max-width: 768px) { 
-//     .category {
-//         &__one {
-//             background: url(/static/images/category-kids-tablet.png) no-repeat center;
-//             background-color: #DBE4DB;
-//         }
-//         &__two {
-//             background: url(/static/images/category-holiday-tablet.png) no-repeat center;
-//             background-color: #EADDD3;
-//         }
-//         &__three {
-//             background: url(/static/images/category-toys-tablet.png) no-repeat center;
-//             background-color: #F8F2DA;
-//         }
-//         &__four {
-//             background: url(/static/images/category-accessories-tablet.png) no-repeat center;
-//             background-color: #D5D4E1;
-//         }
-//         &__five {
-//             background: url(/static/images/category-sale-tablet.png) no-repeat center;
-//             background-color: #F3D0DB;
-//         }
-//         &__six {
-//             background: url(/static/images/category-adults-tablet.png) no-repeat center;
-//             background-color: #E5EAF8;
-//         }
-//     }
-// }
+    .row .content {
+        height: 196px;
+        padding: 0;
+    }
 
-// @media screen and (max-width: 375px) { 
-//     .category {
-//         &__one {
-//             background: url(/static/images/category-kids-mobile.png) no-repeat center;
-//             background-color: #DBE4DB;
-//         }
-//         &__two {
-//             background: url(/static/images/category-holiday-mobile.png) no-repeat center;
-//             background-color: #EADDD3;
-//         }
-//         &__three {
-//             background: url(/static/images/category-toys-mobile.png) no-repeat center;
-//             background-color: #F8F2DA;
-//         }
-//         &__four {
-//             background: url(/static/images/category-accessories-mobile.png) no-repeat center;
-//             background-color: #D5D4E1;
-//         }
-//         &__five {
-//             background: url(/static/images/category-sale-mobile.png) no-repeat center;
-//             background-color: #F3D0DB;
-//         }
-//         &__six {
-//             background: url(/static/images/category-adults-mobile.png) no-repeat center;
-//             background-color: #E5EAF8;
-//         }
-//     }
-// }
+    .page-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-top: 35px;
+    }
 
+    .breadcrumbs {
+        padding: 11px 0 29px;
+    }
 
-// @media screen and (min-resolution: 2dppx)  and (min-width: 769px) {
-//     .category {
-//         &__one {
-//             background: url(/static/images/category-kids@2x.png) no-repeat center #DBE4DB;
-//             background-size: 280px;
-//         }
-//         &__two {
-//             background: url(/static/images/category-holiday@2x.png) no-repeat center #EADDD3;
-//             background-size: 280px;
-//         }
-//         &__three {
-//             background: url(/static/images/category-toys@2x.png) no-repeat center #F8F2DA;
-//             background-size: 280px;
-//         }
-//         &__four {
-//             background: url(/static/images/category-accessories@2x.png) no-repeat center #D5D4E1;
-//             background-size: 280px;
-//         }
-//         &__five {
-//             background: url(/static/images/category-sale@2x.png) no-repeat center #F3D0DB;
-//             background-size: 280px;
-//         }
-//         &__six {
-//             background: url(/static/images/category-adults@2x.png) no-repeat center #E5EAF8;
-//             background-size: 280px;
-//         }
-//     }
-// }
+    .category {
 
+        &__image {
+            width: 100%;
+        }
 
-// @media screen and (min-resolution: 2dppx) and (max-width: 768px) { 
-//     .category {
-//         &__one {
-//             background: url(/static/images/category-kids-tablet@2x.png) no-repeat center #DBE4DB;
-//             background-size: 258px;
-//         }
-//         &__two {
-//             background: url(/static/images/category-holiday-tablet@2x.png) no-repeat center #EADDD3;
-//             background-size: 258px;
-//         }
-//         &__three {
-//             background: url(/static/images/category-toys-tablet@2x.png) no-repeat center #F8F2DA;
-//             background-size: 258px;
-//         }
-//         &__four {
-//             background: url(/static/images/category-accessories-tablet@2x.png) no-repeat center #D5D4E1;
-//             background-size: 258px;
-//         }
-//         &__five {
-//             background: url(/static/images/category-sale-tablet@2x.png) no-repeat center #F3D0DB;
-//             background-size: 258px;
-//         }
-//         &__six {
-//             background: url(/static/images/category-adults-tablet@2x.png) no-repeat center #E5EAF8;
-//             background-size: 258px;
-//         }
-//     }
-// }
-// @media screen and (min-resolution: 2dppx) and (max-width: 375px) { 
-//     .category {
-//         &__one {
-//             background: url(/static/images/category-kids-mobile@2x.png) no-repeat center #DBE4DB;
-//             background-size: 247px;
-//         }
-//         &__two {
-//             background: url(/static/images/category-holiday-mobile@2x.png) no-repeat center #EADDD3;
-//             background-size: 247px;
-//         }
-//         &__three {
-//             background: url(/static/images/category-toys-mobile@2x.png) no-repeat center #F8F2DA;
-//             background-size: 247px;
-//         }
-//         &__four {
-//             background: url(/static/images/category-accessories-mobile@2x.png) no-repeat center #D5D4E1;
-//             background-size: 247px;
-//         }
-//         &__five {
-//             background: url(/static/images/category-sale-mobile@2x.png) no-repeat center #F3D0DB;
-//             background-size: 247px;
-//         }
-//         &__six {
-//             background: url(/static/images/category-adults-mobile@2x.png) no-repeat center #E5EAF8;
-//             background-size: 247px;
-//         }
-//     }
-// }
+        h3 {
+            font-size: 3vw;
+            line-height: 29px;
+            top: 57%;
+        }
+    }
+
+    .description__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 19px;
+        margin-top: 21px;
+    }
+
+    section.description {
+        padding-right: 8px;
+
+        p {
+            margin-left: 0;
+
+        }
+    }
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+    main.container-grid {
+        margin-bottom: 47px;
+    }
+
+    .row .content {
+        height: 154px;
+        padding: 0;
+    }
+
+    .page-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 20px;
+    }
+
+    .breadcrumbs {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 0 19px;
+
+        &__list li {
+            margin-right: 12px;
+        }
+
+        &__link::after {
+            background-size: 8px 11px;
+            margin-left: 14px;
+            height: 10px;
+        }
+    }
+
+    .category {
+
+        &__image {
+            width: 70%;
+        }
+
+        h3 {
+            font-size: 4.8vw;
+            line-height: 22px;
+            top: 58%;
+        }
+    }
+
+    section.description {
+        padding-right: 0;
+    }
+
+    .description {
+        p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 0px;
+            margin-top: 11px;
+        }
+    }
+
+    *[class*="col"] {
+        padding: 18px 8px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .category {
+
+        &__image {
+            width: 100%;
+        }
+    }
+}

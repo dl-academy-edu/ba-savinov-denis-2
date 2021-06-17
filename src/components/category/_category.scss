@@ -1,0 +1,59 @@
+.category {
+
+    &__item {
+        position: relative;
+    }
+
+    h3 {
+        position: absolute;
+        font-family: var(--font-montserrat);
+        top: 53%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+        transition: .4s;
+
+        &:active,
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+
+    &__one {
+        background-color: #DBE4DB;
+    }
+
+    &__two {
+        background-color: rgba(186, 142, 107, 0.3);
+    }
+
+    &__three {
+        background-color: #F8F2DA;
+    }
+
+    &__four {
+        background-color: rgba(9, 3, 79, 0.17);
+        ;
+    }
+
+    &__five {
+        background-color: rgba(207, 68, 111, 0.25);
+        ;
+    }
+
+    &__six {
+        background-color: rgba(125, 151, 218, 0.2);
+        ;
+    }
+
+    &__link {
+        text-align: center;
+    }
+}
