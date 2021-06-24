@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>DLK</title>
-
+    <meta name="description" content="Visit our store, where you can please yourself and your children with excellent products. Give joy to your children">
+    <title>Online hypermarket of children's toys, clothing and goods for children and their parents</title>
 </head>
 
 <body>
@@ -42,9 +42,14 @@
                 <div class="slider__text">
                     <h1 class="slider__title slider__text-item">THE OOH NOO COLLECTION</h1>
                     <p class="slider__text-item">Designed in Slovenia</p>
-                    @@include('btn-button/index.html', { "type": "button", "id": "", "class":"slider__text-btn", "text": "EXPLORE NOW" })
+                    @@include('btn-button/index.html', { "type": "button", "id": "#slider__text-btn", "class":"slider__text-btn", "text": "EXPLORE NOW" })
                 </div>
-                <img class="slider__img" src="/static/images/monster.png" alt="" width="636" height="489">
+                <picture class="slider__img-box">
+                    <source srcset="/static/images/monster-mobile.png, /static/images/monster-mobile@2x.png 2x" media="(max-width: 375px)">
+                    <source srcset="/static/images/monster-tablet.png, /static/images/monster-tablet@2x.png 2x" media="(max-width: 768px)">
+                    <source srcset="/static/images/monster.png, /static/images/monster@2x.png 2x">
+                    <img class="slider__img" src="../../static/images/poster.png" loading="lazy" alt="Monster image" />
+                </picture>
             </div>
             <div class="slider__footer">
                 <p>Free (continental) USA shipping on all orders of $100 USD or more!</p>
@@ -53,24 +58,78 @@
         <section class="category swiper-container">
             <h2 class="category__title">Category Products</h2>
             <div class="category__wrapper swiper-wrapper">
-                <a class="category__item category__item_one swiper-slide" href="#">
-                    <h3>APPAREL KIDS</h3>
-                </a>
-                <a class="category__item category__item_two swiper-slide" href="#">
-                    <h3>HOLIDAY SHOP</h3>
-                </a>
-                <a class="category__item category__item_three swiper-slide" href="pages/toys/">
-                    <h3>TOYS</h3>
-                </a>
-                <a class="category__item category__item_four swiper-slide" href="#">
-                    <h3>ACCESSORIES</h3>
-                </a>
-                <a class="category__item category__item_five swiper-slide" href="#">
-                    <h3>SALE</h3>
-                </a>
-                <a class="category__item category__item_six swiper-slide" href="#">
-                    <h3>APPAREL ADULTS</h3>
-                </a>
+                @@include('slide/index.html', {
+                    "class-link": "category__item_one",
+                    "alt-img": "Category Apparel Kids",
+                    "link": "#",
+                    "url-img": "../../static/images/category-kids.png",
+                    "url-img2x": "../../static/images/category-kids@2x.png",
+                    "url-tablet": "../../static/images/category-kids-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-kids-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-kids-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-kids-main-mobile@2x.png",
+                    "title":"APPAREL KIDS"
+                })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_two",
+                    "alt-img": "Category Holiday Shop",
+                    "link": "#",
+                    "url-img": "../../static/images/category-holiday.png",
+                    "url-img2x": "../../static/images/category-holiday@2x.png",
+                    "url-tablet": "../../static/images/category-holiday-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-holiday-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-holiday-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-holiday-main-mobile@2x.png",
+                    "title":"HOLIDAY SHOP"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_three",
+                    "alt-img": "Category Toys",
+                    "link": "pages/toys/",
+                    "url-img": "../../static/images/category-toys.png",
+                    "url-img2x": "../../static/images/category-toys@2x.png",
+                    "url-tablet": "../../static/images/category-toys-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-toys-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-toys-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-toys-main-mobile@2x.png",
+                    "title":"TOYS"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_four",
+                    "alt-img": "Category Accessories",
+                    "link": "#",
+                    "url-img": "../../static/images/category-accessories.png",
+                    "url-img2x": "../../static/images/category-accessories@2x.png",
+                    "url-tablet": "../../static/images/category-accessories-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-accessories-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-accessories-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-accessories-main-mobile@2x.png",
+                    "title":"ACCESSORIES"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_five",
+                    "alt-img": "Category Sale",
+                    "link": "#",
+                    "url-img": "../../static/images/category-sale.png",
+                    "url-img2x": "../../static/images/category-sale@2x.png",
+                    "url-tablet": "../../static/images/category-sale-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-sale-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-sale-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-sale-main-mobile@2x.png",
+                    "title":"SALE"
+                    })
+                @@include('slide/index.html', {
+                    "class-link": "category__item_six",
+                    "alt-img": "Category Apparel Adults",
+                    "link": "#",
+                    "url-img": "../../static/images/category-adults.png",
+                    "url-img2x": "../../static/images/category-adults@2x.png",
+                    "url-tablet": "../../static/images/category-adults-main-tablet.png",
+                    "url-tablet2x": "../../static/images/category-adults-main-tablet@2x.png",
+                    "url-mobile": "../../static/images/category-adults-main-mobile.png",
+                    "url-mobile2x": "../../static/images/category-adults-main-mobile@2x.png",
+                    "title":"APPAREL ADULTS"
+                    })
             </div>
             <div class="control">
                 <button class="control__btn_prev" aria-label="button previous category" type="button"></button>
@@ -80,7 +139,12 @@
         </section>
         <section class="delivery">
             <div class="delivery__crop-img">
-                <img src="/static/images/woman.jpg" alt="delivery-img">
+                <picture class="delivery__img-box">
+                    <source srcset="/static/images/woman-mobile.jpg, /static/images/woman-mobile@2x.jpg 2x" media="(max-width: 375px)">
+                    <source srcset="/static/images/woman-tablet.jpg, /static/images/woman-tablet@2x.jpg 2x" media="(max-width: 768px)">
+                    <source srcset="/static/images/woman.jpg, /static/images/woman@2x.jpg 2x">
+                    <img class="delivery__img" src="/static/images/woman.jpg" alt="Woman photo"/>
+                </picture>
             </div>
             <div class="delivery__content">
                 <h2 class="delivery__title">Delivery</h2>
@@ -100,13 +164,41 @@
                 @@include('btn-a/index.html', { "link": "#", "class":"delivery__learn-btn", "text": "LEARN MORE" })
             </div>
         </section>
-        <section class="company">
+        <section class="company container">
             <h2 class="visually-hidden">Company</h2>
             <ul class="company__list">
-                <li><img src="/static/images/company/mail-group.png" alt="" width="193" height="60"></li>
-                <li><img src="/static/images/company/apple.png" alt="" width="179" height="61"></li>
-                <li><img src="/static/images/company/eltex.png" alt="" width="216" height="46"></li>
-                <li><img src="/static/images/company/owox.png" alt="" width="211" height="40"></li>
+                <li class="company__list-item-1">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/mail-group-mobile.png, /static/images/company/mail-group-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/mail-group-tablet.png, /static/images/company/mail-group-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/mail-group.png, /static/images/company/mail-group@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/mail-group.png" alt="Mail Group logo" loading="lazy"/>
+                    </picture>
+                </li>
+                <li class="company__list-item-2">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/apple-mobile.png, /static/images/company/apple-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/apple-tablet.png, /static/images/company/apple-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/apple.png, /static/images/company/apple@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/apple.png" alt="Apple logo" loading="lazy"/>
+                    </picture>
+                </li>
+                <li class="company__list-item-3">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/eltex-mobile.png, /static/images/company/eltex-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/eltex-tablet.png, /static/images/company/eltex-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/eltex.png, /static/images/company/eltex@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/eltex.png" alt="Eltex logo" loading="lazy"/>
+                    </picture>
+                </li>
+                <li class="company__list-item-4">
+                    <picture class="company__list-box">
+                        <source srcset="/static/images/company/owox-mobile.png, /static/images/company/owox-mobile@2x.png 2x" media="(max-width: 375px)">
+                        <source srcset="/static/images/company/owox-tablet.png, /static/images/company/owox-tablet@2x.png 2x" media="(max-width: 768px)">
+                        <source srcset="/static/images/company/owox.png, /static/images/company/owox@2x.png 2x">
+                        <img class="company__list-img" src="/static/images/company/owox.png" alt="Owox logo" loading="lazy"/>
+                    </picture>
+                </li>
             </ul>
         </section>
         <section class="dlk-info">
@@ -116,7 +208,7 @@
                 <div class="about-us__wrapper">
                     <h3>About Us</h3>
                     <p>Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-                    @@include('btn-button/index.html', { "type": "button", "id": "", "class":"about-us__btn", "text": "buy now" })
+                    @@include('btn-button/index.html', { "type": "button", "id": "#about-us__btn", "class":"about-us__btn", "text": "buy now" })
                 </div>
             </article>
             <article class="contacts">
@@ -131,12 +223,12 @@
     </main>
     @@include('footer/index.html') @@include('modal/index.html')
 
-    <script src="scripts.js"></script>
-    <script src="mobile-menu.js"></script>
-    <script src="star-rating.js"></script>
-    <script src="contact-form.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="module" src="swiper-slider.js"></script>
+    <script defer src="scripts.js"></script>
+    <script defer src="mobile-menu.js"></script>
+    <script defer src="star-rating.js"></script>
+    <script defer src="contact-form.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="swiper-slider.js"></script>
 </body>
 
 </html>

@@ -47,3 +47,51 @@
 path {
     transition: .4s;
 }
+
+
+
+//MEDIA
+
+@media screen and (max-width: 674px) {
+    .pagination__list li {
+        margin-right: 10vw;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .pagination {
+        padding-bottom: 45px;
+
+        &__item {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__btn-prev,
+        &__btn-next {
+            margin-top: 6px;
+        }
+
+        &__list {
+            margin: 10px 0 5px;
+            padding-left: 53px;
+
+            li {
+                margin-right: 14vw;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 280px) and (max-width: 374px) {
+    .pagination {
+        .pagination__list {
+            padding-left: 14%;
+        }
+    }
+    
+}
+

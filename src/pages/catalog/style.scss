@@ -1,123 +1,187 @@
-@mixin category-item {
-    margin-right: 20px;
-    margin-bottom: 23px;
+.row {
+    .content {
+        padding: 15px;
+        box-sizing: border-box;
+        height: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-@mixin category-item-h3 {
-    margin: auto;
-    font-family: var(--font-montserrat);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+main.container-grid {
+    margin-bottom: 58px;
 }
-
-@mixin text-decoration-category {
-    text-decoration-line: underline;
-}
-
-
-/* breadcrumbs */
 
 .breadcrumbs {
-    padding: 17px 0 50px;
+    padding: 16px 0 50px;
 }
 
+.page-title {
+    margin: auto;
+}
 
 /* category */
 
 .category {
-    &__wrapper {
-        max-width: 1080px;
-        width: 100%;
-    }
     &__list {
         list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-    }
-    &__link {
-        display: flex;
-        width: 280px;
-        height: 270px;
-        padding: 0 44px;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-    &__item_left {
-        @include category-item;
-        h3 {
-            @include category-item-h3;
-            transition: .4s;
-            &:active,
-            &:hover {
-                @include text-decoration-category;
-            }
-        }
-    }
-    &__item_right {
-        &:not(:nth-child(3n)) {
-            @include category-item;
-        }
-        h3 {
-            @include category-item-h3;
-            transition: .4s;
-            &:active,
-            &:hover {
-                @include text-decoration-category;
-            }
-        }
-    }
-    &__item_left+&__item_right {
-        margin-left: auto;
-    }
-    &__one {
-        background: url(../../static/images/category-kids.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #DBE4DB;
-    }
-    &__two {
-        background: url(../../static/images/category-holiday.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #EADDD3;
-    }
-    &__three {
-        background: url(../../static/images/category-toys.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #F8F2DA;
-    }
-    &__four {
-        background: url(../../static/images/category-accessories.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #D5D4E1;
-    }
-    &__five {
-        background: url(../../static/images/category-sale.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #F3D0DB;
-    }
-    &__six {
-        background: url(../../static/images/category-adults.png) no-repeat center;
-        background-blend-mode: multiply;
-        background-color: #E5EAF8;
+        padding-left: 0;
     }
 }
 
+section.description {
+    padding-left: 0;
 
-/* description */
+    p {
+        margin-left: 3px;
+    }
+}
 
 .description {
-    max-width: 680px;
-    width: 100%;
-    margin-left: 200px;
-    padding: 32px 0 39px;
     &__title {
-        margin: 0 0 24px;
+        margin-bottom: 25px;
+    }
+}
+
+//MEIDA
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    .row .content {
+        height: 95%;
+    }
+
+    .category {
+
+        &__image {
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    main.container-grid {
+        margin-bottom: 48px;
+    }
+
+    .row .content {
+        height: 196px;
+        padding: 0;
+    }
+
+    .page-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-top: 35px;
+    }
+
+    .breadcrumbs {
+        padding: 11px 0 29px;
+    }
+
+    .category {
+
+        &__image {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 3vw;
+            line-height: 29px;
+            top: 57%;
+        }
+    }
+
+    .description__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 19px;
+        margin-top: 21px;
+    }
+
+    section.description {
+        padding-right: 8px;
+
+        p {
+            margin-left: 0;
+
+        }
+    }
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+    main.container-grid {
+        margin-bottom: 47px;
+    }
+
+    .row .content {
+        height: 154px;
+        padding: 0;
+    }
+
+    .page-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 20px;
+    }
+
+    .breadcrumbs {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 0 19px;
+
+        &__list li {
+            margin-right: 12px;
+        }
+
+        &__link::after {
+            background-size: 8px 11px;
+            margin-left: 14px;
+            height: 10px;
+        }
+    }
+
+    .category {
+
+        &__image {
+            width: 70%;
+        }
+
+        h3 {
+            font-size: 4.8vw;
+            line-height: 22px;
+            top: 58%;
+        }
+    }
+
+    section.description {
+        padding-right: 0;
+    }
+
+    .description {
+        p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 0px;
+            margin-top: 11px;
+        }
+    }
+
+    *[class*="col"] {
+        padding: 18px 8px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .category {
+
+        &__image {
+            width: 100%;
+        }
     }
 }

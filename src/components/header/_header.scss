@@ -1,5 +1,5 @@
 .header {
-    padding: 40px 0 60px;
+    padding: 49px 0 60px;
     display: flex;
     align-items: center;
     a {
@@ -112,9 +112,6 @@
         &__mobile-btn_open {
             display: block;
         }
-       &__container-mobile {
-            width: 86.1%;
-        }
     }
     .logo {
         width: 62px;
@@ -131,7 +128,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .header {
-        padding: 3.6vw 0 60px;
+        padding: 4.5vw 0 35px;
     }
 }
 
@@ -144,7 +141,8 @@
 
 @media screen and (max-width: 375px) {
     .header {
-        &__container-mobile {
+        padding: 6.4vw 0 25px;
+        &.container {
             width: 315px;
         }
     }
@@ -164,5 +162,13 @@
     .logo {
         width: 42px;
         height: 22px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 374px) {
+    .header {
+        &.container {
+            width: 86%;
+        }
     }
 }

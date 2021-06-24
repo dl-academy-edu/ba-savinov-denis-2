@@ -1,11 +1,14 @@
 @mixin contacts-wrapper {
-    margin-top: 4px;
+    margin-top: 7px;
     box-sizing: border-box;
     width: 100%;
+    font-family: var(--font-roboto);
+    font-weight: 400;
     font-size: 18px;
-    line-height: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 13px 20px 10px;
+    line-height: 21px;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 13px 19px 12px;
+    transition: .4s;
 }
 
 
@@ -24,9 +27,9 @@
     }
     &__form {
         label {
-            font-family: var(--font-opensans);
+            font-family: var(--font-roboto);
             font-size: 14px;
-            line-height: 19px;
+            line-height: 16px;
             display: block;
         }
     }
@@ -37,6 +40,7 @@
         textarea {
             @include contacts-wrapper;
             resize: none;
+            padding: 11px 19px 12px;
         }
     }
     &__wrapper input:not([type=checkbox]) {
@@ -59,7 +63,7 @@
         }
     }
     &__message {
-        margin-top: 20px;
+        margin-top: 22px;
     }
     &__agreement {
         display: flex;
@@ -71,6 +75,10 @@
             height: 0;
         }
         label {
+            font-family: var(--font-roboto);
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
             position: relative;
             margin-left: 33px;
             transition: .4s;
@@ -78,7 +86,7 @@
                 content: '';
                 position: absolute;
                 left: -33px;
-                top: 0;
+                top: -2px;
                 width: 19px;
                 height: 19px;
                 border: 2px solid #C29974;
@@ -89,7 +97,7 @@
                 content: '';
                 position: absolute;
                 left: -30px;
-                top: 0;
+                top: -2px;
                 width: 15px;
                 height: 15px;
                 background-image: url(../../static/images/stroke.svg);
@@ -112,7 +120,8 @@
         }
     }
     &__btn {
-        margin-top: 18px;
+        margin-top: 21px;
+        font-family: var(--font-opensans);
     }
 }
 
@@ -130,5 +139,203 @@
         line-height: 34px;
         text-transform: uppercase;
         color: #C29974;
+    }
+}
+
+// MEDIA
+@media screen and (max-width: 1200px) {
+    .breadcrumbs {
+        padding: 16px 0 43px;
+    }
+    .page-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 34px 0 -3px 0;
+    }
+    .contacts {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 51px;
+        &__block {
+            order: 1;
+            max-width: 85vw;
+            max-height: 70.8vw;
+            margin-top: 45px;
+            padding: 42px 56px;
+        }
+        &__data div {
+            max-width: 33.6vw;
+            width: 100%;
+        }
+        &__btn {
+            margin-top: 21px;
+            font-family: var(--font-ope);
+        }
+        &__agreement label {
+            margin-left: 34px;
+            &::before{
+                left: -34px;
+            }
+            &::after {
+                left: -31px;
+            }
+        }
+        &__wrapper input:not([type=checkbox]) {
+            margin-top: 11px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+    }
+    .block-text {
+        margin-left: 0;
+        text-align: center;
+        max-width: none;
+        &__content_top {
+            max-width: 65vw;
+        }
+        &__content_bottom {
+            max-width: 70vw;
+        }
+        & &__content_bottom {
+            margin-top: 21px;
+        }
+        & &__slogan{
+            margin-top: 18px;
+        }
+        p {
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .contacts {
+        &__data {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__data div {
+            max-width: 100%;
+        }
+        &__email {
+            margin-top: 16px;
+        }
+        &__block {
+            max-height: none;
+            padding: 7%;
+        }
+    }
+    .block-text {
+        &__content_top,
+        &__content_bottom {
+            max-width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) { 
+    .container {
+        max-width: none;
+        &-mobile {
+            width: 335px;
+        }
+    }
+
+    .page-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 19px 0 -3px;
+    }
+    .block-text{
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        & &__slogan {
+            font-size: 24px;
+            line-height: 34px;
+            margin-top: 15px;
+        }
+        & &__content_bottom {
+            margin-top: 16px;
+            max-width: 100%;
+        }
+    }
+
+    .breadcrumbs {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 16px 0 24px;
+        &__list li {
+            margin-right: 11px;
+        }
+        &__link::after {
+            background-size: 7px 10px;
+            margin-left: 14px;
+            height: 11px;
+            width: 9px;
+        }
+    }
+
+    .contacts {
+        padding-bottom: 53px;
+        &__wrapper input:not([type=checkbox]) {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 7px;
+            padding: 11px 15px 12px;
+        }
+        &__block {
+            margin-top: 27px;
+            max-width: 89vw;
+        }
+        &__data {
+            margin-top: 15px;
+        }
+        &__email {
+            margin-top: 12px;
+        }
+        &__message {
+            margin-top: 12px;
+        }
+        &__agreement {
+            margin-top: 10px;
+            label {
+                margin-left: 30px;
+                &::before {
+                    left: -30px;
+                }
+                &::after {
+                    left: -27px;
+                }
+            }
+        }
+        &__btn {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 374px) { 
+    main.container {
+        max-width: 98%;
+    }
+    .container-mobile {
+        width: 100%;
+    }
+    .contacts {
+        &__block { 
+            padding: 3%;
+        }
+    }
+    .block-text {
+        & &__content_top,
+        & &__content_bottom {
+            max-width: 86%;
+        }
     }
 }

@@ -12,6 +12,7 @@
          url('/static/fonts/Lato-Bold.woff') format('woff');
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
 }
 
 @font-face {
@@ -21,4 +22,5 @@
          url('/static/fonts/Lato-Medium.woff') format('woff');
     font-style: normal;
     font-weight: 500;
+    font-display: swap;
 }

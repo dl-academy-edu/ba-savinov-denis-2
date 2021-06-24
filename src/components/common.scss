@@ -5,6 +5,7 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #1E0606;
+    margin: 0;
 }
 
 a {
@@ -35,8 +36,7 @@ h2 {
 }
 
 .container {
-    max-width: 1180px;
-    width: 100%;
+    width: 1180px;
     margin: 0 auto;
 }
 
@@ -53,6 +53,7 @@ h2 {
     font-size: 16px;
     line-height: 22px;
     cursor: pointer;
+
     &:disabled {
         background: #C1C1C1;
         color: #E1E1E1;
@@ -75,15 +76,18 @@ h2 {
     font-size: 20px;
     line-height: 25px;
     padding: 16px 0 50px;
+
     &__list {
         list-style-type: none;
         display: flex;
         margin: 0;
         padding: 0;
+
         li {
             margin-right: 20px;
         }
     }
+
     &__link::after {
         content: '';
         display: inline-block;
@@ -94,35 +98,30 @@ h2 {
         height: 12px;
         width: 9px;
     }
+
     &__item_active {
         text-transform: capitalize;
         opacity: 0.5;
     }
 }
 
-
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1200px) {
     .container {
-        max-width: 90%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 648px;
+        width: 648px;
     }
 }
 
-
-@media screen and (max-width: 576px) { 
-   
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
 }
-
-@media screen and (max-width: 375px) {
-   
-}
-
-
 
 // Подключение компонентов
 @import "./header/header";
@@ -132,5 +131,5 @@ h2 {
 @import "./article/article";
 @import "./toys/toys";
 @import "./mobile-menu/mobile-menu";
+@import "./category/category";
 @import "./variables.scss";
-// @import url("variables.css");
